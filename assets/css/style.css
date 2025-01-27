@@ -26,14 +26,37 @@
   }
   
   .header .container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-  }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh; /* Default height relative to the viewport height */
+    padding: 0 20px; /* Optional padding for spacing */
+}
+
+@media (max-width: 1200px) {
+    .header .container {
+        height: 12vh; /* Slightly taller for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .header .container {
+        height: 15vh; /* More height for mobile devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .header .container {
+        height: auto; /* Adjust automatically if needed for very small screens */
+        padding: 10px 15px; /* Optional padding for smaller viewports */
+    }
+}
+
   
   .logo {
-	color: var(--white);
-	font-family: var(--ff-rubik);
+	margin-left: 30px;
+	color: aliceblue;
+	font-family: 'Lucida Handwriting', cursive;
 	font-size: 2.8rem;
 	font-weight: var(--fw-700);
 	letter-spacing: -2px;
@@ -138,6 +161,7 @@
   }
   
   .hero-subtitle {
+	margin-top: 150px;
 	font-size: 1.8rem;
 	font-family: 'Lucida Handwriting', cursive;	font-weight: 900; 
 	margin-bottom: 2px;
