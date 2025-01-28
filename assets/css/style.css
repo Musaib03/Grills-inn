@@ -1,7 +1,7 @@
-/*-----------------------------------*\
-  #HEADER
-\*-----------------------------------*/
-
+body {
+    margin: 0;
+    padding: 0;
+}
 .header {
 	position: fixed;
 	top: 0;
@@ -25,33 +25,79 @@
 	100% { transform: translateY(100%); }
   }
   
-  .header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 10vh; /* Default height relative to the viewport height */
-    padding: 0 20px; /* Optional padding for spacing */
-}
-
-@media (max-width: 1200px) {
-    .header .container {
-        height: 12vh; /* Slightly taller for smaller screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .header .container {
-        height: 15vh; /* More height for mobile devices */
-    }
-}
-
-@media (max-width: 480px) {
-    .header .container {
-        height: auto; /* Adjust automatically if needed for very small screens */
-        padding: 10px 15px; /* Optional padding for smaller viewports */
-    }
-}
-
+/* General Styles */
+.header .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 10vh;
+	padding: 0 20px;
+  }
+  
+  /* Navigation Styles */
+/* General Styles for Navigation */
+.nav {
+	display: flex; /* Default for desktop view */
+	gap: 20px;
+	transition: right 0.3s ease-in-out;
+  }
+  
+  /* Hide navigation links by default in mobile view */
+  @media (max-width: 768px) {
+	.nav {
+	  position: fixed;
+	  top: 80px;
+	  right: -100%; /* Move out of view */
+	  background-color: orange;
+	  width: 200px;
+	  height: calc(100vh - 80px);
+	  flex-direction: column;
+	  align-items: flex-start;
+	  padding: 20px;
+	  z-index: 10;
+	  display: none; /* Hide initially */
+	}
+  
+	.nav.active {
+	  display: flex; /* Show only when active */
+	  right: 0;
+	}
+  
+	.navbar-list li {
+	  margin-bottom: 20px;
+	}
+  
+	/* Hamburger Menu */
+	.nav-toggle-btn {
+	  display: flex;
+	  flex-direction: column;
+	  gap: 5px;
+	  cursor: pointer;
+	  z-index: 20;
+	}
+  
+	.nav-toggle-btn span {
+	  display: block;
+	  width: 25px;
+	  height: 3px;
+	  background-color: #fff;
+	  border-radius: 2px;
+	  transition: all 0.3s ease-in-out;
+	}
+  
+	.nav-toggle-btn.active span:nth-child(1) {
+	  transform: rotate(45deg) translateY(8px);
+	}
+  
+	.nav-toggle-btn.active span:nth-child(2) {
+	  opacity: 0;
+	}
+  
+	.nav-toggle-btn.active span:nth-child(3) {
+	  transform: rotate(-45deg) translateY(-8px);
+	}
+  }
+  
   
   .logo {
 	margin-left: 30px;

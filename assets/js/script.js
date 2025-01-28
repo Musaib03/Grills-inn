@@ -1,13 +1,15 @@
-// Toggle Navbar for Mobile
-const navToggleBtn = document.querySelector("[data-menu-toggle-btn]");
-const navbar = document.querySelector("[data-navbar]");
-const header = document.querySelector("[data-header]");
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.getElementById('nav');
 
-navToggleBtn.addEventListener("click", () => {
-  navbar.classList.toggle("active");
-  navToggleBtn.classList.toggle("active");
-  header.classList.toggle("active");
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    hamburger.classList.toggle('active');
+  });
 });
+
+
+
 
 // // Toggle Search Box
 // const searchBtn = document.querySelector("[data-search-btn]");
