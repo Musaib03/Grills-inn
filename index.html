@@ -17,28 +17,22 @@
 
 <body>
   <!-- navbar -->
-  <nav>
+  <nav class="navbar" id="navbar">
     <div class="logo">Grills Inn</div>
-    <ul class="menu">
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </label>
+    <ul class="navmenu">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About Us</a></li>
       <li><a href="#contact">Contact Us</a></li>
       <li><a href="#shop">Shop</a></li>
     </ul>
-
-    <div id="menuToggle">
-      <input type="checkbox" id="menuCheckbox">
-      <span></span>
-      <span></span>
-      <span></span>
-      <ul id="menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-        <li><a href="#shop">Shop</a></li>
-      </ul>
-    </div>
   </nav>
+
   <!-- Hero Section -->
   <section class="hero" id="home" style="background-image: url('./assets/images/homebg1.jpg')">
     <div class="container">
