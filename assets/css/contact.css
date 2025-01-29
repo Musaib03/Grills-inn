@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: hsl(34, 100%, 43%);
+    animation: backgroundZoom 10s infinite alternate;
+}
+h1, h2 {
+    text-align: center;
+    color: black;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.contact-page {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 2px 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    text-align: center;
+}
+.contact-container {
+    display: flex;
+    flex-direction: rows;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #db0f0f;
+}
+.contact-info, .opening-hours, .booking-form {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #ffffffc7;
+    border-radius: 100px;
+    box-shadow: 2px 0 8px 6px rgba(0, 0, 0, 0.1);
+}
+.contact-info ul, .opening-hours ul {
+    padding: 0;
+    margin: 0;
+}
+.contact-info li, .opening-hours li {
+    padding: 8px 0;
+    font-size: 16px;
+}
+.booking-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.input-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+}
+.input-wrapper input, .input-wrapper select, textarea {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    width: calc(50% - 10px);
+    max-width: 400px;
+}
+textarea {
+    resize: vertical;
+    height: 100px;
+    width: 100%;
+}
+.btn {
+    padding: 12px 25px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #ff6600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.2s;
+}
+.btn:hover {
+    background-color: black;
+}
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 20px;
+    border-top: 5px solid #ff6600;
+    width: 100%;
+}
+.footer a {
+    color: #ff6600;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+@keyframes backgroundZoom {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+@media (max-width: 1024px) {
+    .contact-page {
+        flex-wrap: wrap; 
+    }
+    .contact-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .contact-info, .opening-hours, .booking-form {
+        flex: 1 1 45%; 
+    }
+}
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column; 
+    }
+    .contact-info, .opening-hours, .booking-form {
+        width: 80%;
+    }
+    .btn {
+        width: 80%;
+    }
+}
+@media (max-width: 480px) {
+    .contact-page {
+        flex-direction: column;
+    }
+    .contact-info, .opening-hours, .booking-form {
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .input-wrapper {
+        flex-direction: row-reverse;
+    }
+    .input-wrapper input, .input-wrapper select, textarea {
+        width: 100%;
+    }
+    .btn {
+        width: 50%;
+    }
+}
