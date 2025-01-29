@@ -5,7 +5,17 @@ body {
     box-sizing: border-box;
     background-color: #f9f9f9;
     color: hsl(34, 100%, 43%);
-    animation: backgroundZoom 10s infinite alternate;
+}
+.logo {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.logo img {
+  max-width: 30%; 
+  border-radius: 30px; 
+  padding-bottom: 2px;
 }
 h1, h2 {
     text-align: center;
@@ -17,40 +27,38 @@ ul {
     margin: 0;
 }
 .contact-page {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 30px auto;
-    padding: 30px;
+    padding: 20px;
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 2px 0 4px 12px rgba(0, 0, 0, 0.1);
     display: flex;
     text-align: center;
+    gap:10px;
 }
 .contact-container {
     display: flex;
     flex-direction: rows;
     align-items: center;
     width: 100%;
-    padding: 20px;
     border-radius: 8px;
     background-color: #db0f0f;
 }
 .contact-info, .opening-hours, .booking-form {
     width: 100%;
-    max-width: 800px;
-    margin-bottom: 20px;
-    padding: 20px;
+    padding: 10px;
     background: #ffffffc7;
-    border-radius: 100px;
+    border-radius: 10px;
     box-shadow: 2px 0 8px 6px rgba(0, 0, 0, 0.1);
 }
 .contact-info ul, .opening-hours ul {
-    padding: 0;
+    padding: 2px;
     margin: 0;
 }
 .contact-info li, .opening-hours li {
     padding: 8px 0;
-    font-size: 16px;
+    font-size: 14px;
 }
 .booking-form form {
     display: flex;
@@ -67,12 +75,12 @@ ul {
 }
 .input-wrapper input, .input-wrapper select, textarea {
     flex: 1;
-    padding: 10px;
+    padding: 10px; 
     font-size: 16px;
     border: 1px solid #000000;
     border-radius: 15px;
     width: calc(50% - 10px);
-    max-width: 400px;
+    max-width: 300px;
 }
 textarea {
     resize: vertical;
@@ -97,9 +105,9 @@ textarea {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 20px 20px;
+    padding: 10px 10px;
     border-top: 5px solid #ff6600;
-    width: 100%;
+    width: auto;
 }
 .footer a {
     color: #ff6600;
