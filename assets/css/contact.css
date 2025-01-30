@@ -5,6 +5,8 @@ body {
     box-sizing: border-box;
     background-color: #f9f9f9;
     color: hsl(34, 100%, 43%);
+    overflow-x: hidden;
+
 }
 .container {
     max-width: auto;
@@ -33,21 +35,25 @@ ul {
 }
 .contact-page {
     max-width: auto;
-    padding-top: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
     padding: 20px;
     background: #ffffff;
-    border-radius: 10px;  
+    border-radius: 50px;  
     display: flex;
     flex-direction: rows;
     align-items: center;
     text-align: center;
     gap: 10px;
+    overflow-x: hidden;
 }
 .contact-container {
     display: flex;
     width: 100%;
     border-radius: 8px;
     background-color: #db0f0f;
+    overflow-x: hidden;
+
 }
 .contact-info, .opening-hours, .booking-form {
     width: 100%;
@@ -112,7 +118,7 @@ textarea {
     border-top: 5px solid #ff6600;
     width: 100%;
     position: relative;
-    margin-top: 210px;
+    margin-top: 220px;
 }
 .footer a {
     color: #ff6600;
@@ -154,9 +160,9 @@ textarea {
         padding: 10px;
     }
     .input-wrapper input, .input-wrapper select, textarea {
-        width: 100%;
+        width: 90%;
     }
     .btn {
-        width: 100%;
+        width: 80%;
     }
 }
