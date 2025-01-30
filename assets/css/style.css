@@ -81,7 +81,7 @@ html {
 }
 
 #menuToggle input:checked + label .bar:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: rotate(-45deg) translate(6px, -7px);
 }
 
 #menuToggle .navmenu {
