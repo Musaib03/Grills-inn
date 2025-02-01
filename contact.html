@@ -7,56 +7,56 @@
     <link rel="stylesheet" href="./assets/css/contact.css">
 </head>
 <body>
-    <!-- Contact Page Content -->
-    <main class="contact-page">
-        <section class="contact-info">
-            <h1>Contact Us</h1>
-            <main class="logo">
-              <img src="./assets/images/contact-us.png" alt="logo image" />
-            </main>
-            <ul>
-                <li><strong>Phone: +91 9797632997</strong></li>
-                <li><strong>Email: Info@YourGmail24.com</strong></li>
-                <li><strong>Address: 123 Lal Chownk, Kashmir</strong></li>
-            </ul>
-        </section>
-        <section class="opening-hours">
-            <h2>Opening Hours</h2>
-            <main class="logo">
-              <img src="./assets/images/productivity.png" alt="logo image" />
-            </main>
-            <ul>
-                <li><b>Monday-Friday: 08:00-22:00</b></li>
-                <li><b>Saturday: 10:00-16:00</b></li>
-            </ul>
-        </section>
-        <section class="booking-form">
-            <h2>Book a Table</h2>
-            <form action="" method="post">
-                <div class="input-wrapper">
-                    <input type="text" name="full_name" placeholder="Your Name" required>
-                    <input type="email" name="email_address" placeholder="Email" required>
-                </div>
-                <div class="input-wrapper">
-                    <select name="total_person">
-                        <option value="2">2 Person</option>
-                        <option value="3">3 Person</option>
-                        <option value="4">4 Person</option>
-                        <option value="5">5 Person</option>
-                        <option value="6">More Person</option>
-                    </select>
-                    <input type="date" name="booking_date">
-                </div>
-                <textarea name="message" placeholder="Message" required></textarea>
-                <button type="submit" class="btn">Book a Table</button>
-            </form>
-        </section>
-    </main>
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-top" >
-            <p>&copy; 2025 <a href="#">Musaib Wani and Vinit Choudhary</a> All Rights Reserved.</p>
+  <nav>
+    <div class="logo">Grills Inn</div>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="#shop">Shop</a></li>
+    </ul>
+    <div id="menuToggle">
+      <input type="checkbox" id="menuCheckbox" class="menu-toggle">
+      <label for="menuCheckbox">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </label>
+      <ul id="menu" class="navmenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="#shop">Shop</a></li>
+      </ul>
+    </div>
+  </nav>
+    <div class="container">
+        <div class="left">
+            <div class="contact-details">
+                <h2>Contact Details</h2>
+                <p>Phone: +123 456 7890</p>
+                <p>Email: info@grillsin.com</p>
+                <p>Address: 123 Lal Chonk, Kashmir</p>
+                <a href="instragram.com"><p>Visit Grills Inn</p></a>
+            </div>
+            <div class="book-table">
+                <h3>Book a Table</h3>
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="datetime-local" required>
+                    <button type="submit">Book Now</button>
+                </form>
+            </div>
         </div>
+        <div class="right">
+            <h2>Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=...your_kashmir_map_link..." 
+                    width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Grills Inn Shop. All rights reserved.</p>
     </footer>
 </body>
 </html>
