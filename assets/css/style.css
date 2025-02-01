@@ -249,7 +249,7 @@ html {
       transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
       border-radius: 10px;
       box-shadow: 0 4px 15px rgba(8, 7, 7, 0.2);
-      width: calc(19% - 0.75rem) !important ;
+      /* width: calc(19% - 0.75rem) !important ; */
     }
     /* .splide__list {
       margin: 120px !important;
