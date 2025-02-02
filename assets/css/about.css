@@ -157,14 +157,19 @@ body {
   margin-top: 1px;
   flex-wrap: wrap;
 }
+.about-header{
+  margin-top: 70px;
+}
 .about-banner {
   position: relative;
   flex: 1;
   max-width: 100%;
+  margin-bottom: 60px;
 }
 .about-banner img.about-img {
   width: 100%;
-  border-radius: 400px;
+  margin-left: 30px;
+  border-radius: 10px;
 }
 .about-banner img.abs-img {
   position: absolute;
@@ -176,11 +181,13 @@ body {
   flex: 1;
   text-align: left;
   padding: 20px;
+  margin-bottom: 50px;
 }
 .about-title {
-  font-family: cursive;
   text-align: center;
-  color: #f50000;
+  font-family: 'Lucida Handwriting', cursive;
+  font-weight: bold;
+  color:#d35f20;
 }
 .section-title {
   font-size: 2rem;
@@ -224,16 +231,37 @@ body {
 .footer-text {
   text-align: center;
 }
+.about-footer{
+  padding: 30px;
+}
 @media screen and (max-width: 768px) {
   .container {
     flex-direction: column;
     align-items: center;
+    padding: 15px;
   }
   .about-banner,
   .about-content {
     max-width: 100%;
     flex: 1;
     text-align: center;
+  }
+  .about-content{
+    margin-top: -150px;
+  }
+  .about-banner{
+    margin-bottom: 30px;
+  }
+  .about-banner img.about-img{
+    margin-left:0px;
+    height:auto;
+    margin-top: 70px;
+  }
+  .about-banner img.abs-img{
+    margin-top: 70px;
+  }
+  .extra-banner img.extra-img{
+    height: auto;
   }
   .section-title {
     font-size: 1.8rem;
@@ -248,13 +276,85 @@ body {
 }
 @media screen and (max-width: 480px) {
   .section-title {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
   .section-text {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .order-btn {
     font-size: 0.8rem;
     padding: 8px 15px;
+  }
+}
+/* Additional Section Styles */
+.about-extra {
+  padding: 0px 20px;
+  background-color: #cec1c1;
+}
+
+.extra-content, .extra-banner {
+  flex: 1;
+  margin-top: 0px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8rem;
+  padding:0px 25px;
+}
+
+.extra-content {
+  max-width: 50%;
+  text-align: left;
+}
+
+.extra-content .section-title {
+  font-size: 2rem;
+  color: #d35f20;
+  margin-bottom: 15px;
+}
+
+.extra-content .section-text {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.extra-banner img.extra-img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.explore-btn {
+  background-color: #d35f20;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: #b14d18;
+}
+
+@media screen and (max-width: 768px) {
+  .extra-content, .extra-banner {
+    max-width: 100%;
+    text-align: center;
+  }
+  .container {
+    flex-direction: column;
+    margin-top: -50px;
+  }
+  .extra-banner{
+    margin-top: -80px;
+    height: 40vh;
   }
 }
