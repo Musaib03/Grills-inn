@@ -81,7 +81,7 @@ html {
 }
 
 #menuToggle input:checked + label .bar:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: rotate(-45deg) translate(6px, -7px);
 }
 
 #menuToggle .navmenu {
@@ -93,7 +93,7 @@ html {
   background: #fffdfd;
   width: 150px;
   padding: 2rem;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 12px rgba(239, 109, 35, 0.3);
 }
 
 .navmenu{
@@ -161,6 +161,17 @@ html {
   text-align: center;
   color: var(--white);
 }
+/* shading */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(100, 91, 91, 0.5), rgba(10, 9, 9, 0.7));
+  z-index: 1;
+}
 
 .hero-content {
   max-width: 600px;
@@ -205,4 +216,89 @@ html {
   .hero-title{
     font-size: 3rem;
   }
+  .hero-content{
+    margin-top: 20px;
+  }
+  .hero-title {
+    margin-bottom: 20px;
+    font-size: 2.9rem;
+  }
+  .hero-subtitle {
+    margin-top: 80px;
+  }
+  .hero-text {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+
+  }
+  .hero {
+    height: 80vh;
 }
+}
+/* splide */
+    #slider{
+      margin-top: 50px;
+    }
+    .splide__slide {
+      display: flex;
+      flex-direction:column;
+      align-items: center;
+      /* gap:0.5rem; */
+      text-align: center;
+      padding: 0.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(8, 7, 7, 0.2);
+      /* width: calc(19% - 0.75rem) !important ; */
+    }
+    /* .splide__list {
+      margin: 120px !important;
+      margin-right: 100px;
+      padding-right: 5rem !important;
+    } */
+    .splide__slide:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(211, 95, 32, 3); 
+      /* background-color: #f0a500; Change background color to orange */
+      
+    }
+    .product-name {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      color: #d35f20;
+      font-family: Lucida Handwriting, cursive;
+    }
+    .product-image {
+      width: 100%;
+      height: 100%; 
+      object-fit: cover; 
+    }
+    .product-description {
+      font-size: 1rem;
+      color: #666;
+      margin-top: 1rem;
+    }
+    .image-container {
+      width: 200px; 
+      height: 200px; 
+      overflow: hidden; 
+      border-radius: 8px; 
+      margin: 0 auto; 
+    }
+
+    /* Responsive Styling */
+    @media (min-width: 1024px) {
+      .splide__list {
+        display: flex;
+        gap: 1rem;
+      }
+      .splide__pagination {
+        bottom: 0em !important;
+        left: 0;
+        padding: 0 1em;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+      }
+    }
