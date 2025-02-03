@@ -113,7 +113,7 @@ html {
 .navmenu li a {
   color: rgb(0, 0, 0);
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -221,14 +221,14 @@ html {
   }
   .hero-title {
     margin-bottom: 20px;
-    font-size: 2.9rem;
+    font-size: 2.8rem;
   }
   .hero-subtitle {
     margin-top: 80px;
   }
   .hero-text {
     margin-bottom: 20px;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 
   }
   .hero {
