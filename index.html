@@ -8,9 +8,15 @@
 
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/about.css" />
+  <link rel="stylesheet" href="./assets/css/contact.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:wght@400;500;600;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+  
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:wght@400;500;600;700&family=Shadows+Into+Light&display=swap" rel="stylesheet"> -->
   <!-- splide js link -->
   <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css" rel="stylesheet">
 
@@ -24,7 +30,7 @@
     <ul class="menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
-      <li><a href="#contact">Contact Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
       <li><a href="#shop">Shop</a></li>
     </ul>
     <!-- Hamburger Menu -->
@@ -38,7 +44,7 @@
       <ul id="menu" class="navmenu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
         <li><a href="#shop">Shop</a></li>
       </ul>
     </div>
@@ -197,6 +203,47 @@
       <button class="explore-btn" onclick="window.location.href='about.html'">Explore More</button>
     </div>
   </div>
+</section>
+<!-- contact -->
+<section id="contact-sec">
+  <div class="container">
+    <div class="left">
+        <div class="contact-details">
+            <h1>Contact Details</h1>
+            <p><b>Phone:</b> +123 456 7890</p>
+            <p><b>Email:</b> info@grillsin.com</p>
+            <p><b>Address:</b> 123 Lal Chonk, Kashmir</p>
+            <a href="https://www.instagram.com/grills_inn_?igsh=MTdubDUxdXFkcHVoZQ==" target="_blank" style="text-decoration: none; color: inherit;">
+              <p>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#E1306C" width="20px" height="20px" style="margin-right: 8px;">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.849.07 1.366.062 2.633.332 3.608 1.307.975.975 1.245 2.242 1.307 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.332 2.633-1.307 3.608-.975.975-2.242 1.245-3.608 1.307-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.332-3.608-1.307-.975-.975-1.245-2.242-1.307-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.849c.062-1.366.332-2.633 1.307-3.608C4.515 2.495 5.782 2.225 7.148 2.163c1.265-.058 1.645-.07 4.849-.07m0-2.163C8.577 0 8.161.014 7.14.071c-1.472.075-2.717.413-3.712 1.408-.995.995-1.333 2.24-1.408 3.712-.057 1.021-.071 1.437-.071 4.809s.014 3.788.071 4.809c.075 1.472.413 2.717 1.408 3.712.995.995 2.24 1.333 3.712 1.408 1.021.057 1.437.071 4.809.071s3.788-.014 4.809-.071c1.472-.075 2.717-.413 3.712-1.408.995-.995 1.333-2.24 1.408-3.712.057-1.021.071-1.437.071-4.809s-.014-3.788-.071-4.809c-.075-1.472-.413-2.717-1.408-3.712-.995-.995-2.24-1.333-3.712-1.408C15.839.014 15.423 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998zm6.406-11.845a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/>
+                  </svg>
+                  grills_inn_
+              </p>
+          </a> 
+          <a class="social-link" href="https://www.facebook.com/grillsinn" target="_blank">
+            <i class="fab fa-facebook facebook"></i>
+            <span>grillsinn</span>
+        </a>             
+        </div>
+        <div class="book-table">
+            <h2>Book a Table</h2>
+            <form id="frm">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="datetime-local" required>
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+    </div>
+    <div class="right">
+      <!-- <h1>Location</h1> -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.5291435224476!2d75.08216417537339!3d33.721130835142105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e205001ea40c51%3A0xe6dd51eec767c5d1!2sGrills%20inn%20restaurant!5e0!3m2!1sen!2sin!4v1739006732597!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  </div>
+  <footer>
+  © 2025 Grills Inn. Made with ❤️ by Musaib Wani and Vinit Choudhary.
+  </footer>
 </section>
   <script src="./assets/js/script.js"></script>
   <!-- splide slider -->
