@@ -40,8 +40,9 @@ html {
     .menu a {
       text-decoration: none;
       color: white;
-      font-size: 20px;
+      font-size: 1.3rem;
       transition: color 0.3s;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
     .menu a:hover {
@@ -305,6 +306,17 @@ html {
         z-index: 1;
       }
     }
+    @media screen and (max-width: 768px) {
+      .about-content {
+        margin-top: -40px !important;
+      }
+      @media screen and (max-width: 768px) {
+        .about-banner img.about-img {
+          margin-left: 40px !important;
+          height: auto;
+          margin-top: 70px;
+        }
+      }
 .container{
   margin-bottom: -4rem;
 }
