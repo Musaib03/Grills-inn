@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+	/* background-color: #cec1c1; */
+    /* overflow: hidden; */
+  }
+.card {
+    margin-bottom: 20px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.show-cart tbody tr td {
+    vertical-align: middle;
+}
+    /* Navbar Styles */
+    nav {
+		position: sticky; 
+		top: 0; 
+		background-color: #d35f20;
+		color: white;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		padding: 0.5rem 1rem;
+		height: 70px;
+		z-index: 10;
+		opacity: 1;
+		transition: opacity 0.5s ease; 
+	  }
+  
+	  .logo {
+		font-size: 2rem;
+		font-weight: bold;
+		font-family: 'Lucida Handwriting', cursive;
+	  }
+  
+	  .menu {
+		list-style: none;
+		display: flex;
+		gap: 6rem;
+		margin: 0;
+		padding: 0;
+	  }
+  
+	  .menu li {
+		display: inline;
+	  }
+  
+	  .menu a {
+		text-decoration: none;
+		color: white;
+		font-size: 20px;
+		transition: color 0.3s;
+	  }
+  
+	  .menu a:hover {
+		color: #f0a500;
+	  }
+  
+  /* Hamburger Menu */
+  #menuToggle {
+	position: absolute;
+	top: 25px; 
+	right: 15px; 
+	z-index: 15; 
+  }
+  
+  #menuToggle label {
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+	gap: 5px;
+  }
+  #menuToggle input {
+	display: none; 
+  }
+  #menuToggle .bar {
+	width: 25px;
+	height: 3px;
+	background-color: white;
+	transition: transform 0.3s, opacity 0.3s;
+  }
+  
+  #menuToggle input:checked + label .bar:nth-child(1) {
+	transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  #menuToggle input:checked + label .bar:nth-child(2) {
+	opacity: 0;
+  }
+  
+  #menuToggle input:checked + label .bar:nth-child(3) {
+	transform: rotate(-45deg) translate(6px, -7px);
+  }
+  
+  #menuToggle .navmenu {
+	display: none;
+	flex-direction: column;
+	position: absolute;
+	top: 40px;
+	right: 5px;
+	background: #fffdfd;
+	width: 215px;
+	padding: 2rem;
+	box-shadow: 0px 4px 12px rgba(239, 109, 35, 0.3);
+  }
+  
+  .navmenu{
+	list-style: none;
+	margin:0;
+	padding: 0;
+  }
+  #menuToggle input:checked ~ .navmenu {
+	display: flex;
+  }
+  
+  .navmenu li {
+	text-align: center;
+	margin: 0.5rem 0;
+  }
+  
+  .navmenu li a {
+	color: rgb(0, 0, 0);
+	/* text-decoration: none; */
+	font-size: 1.3rem;
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  /*hamburger menu only on mobile view */
+  #menuToggle {
+	display: none; 
+  }
+  .menu {
+	display: none; 
+  }
+  @media (max-width: 768px) {
+	#menuToggle {
+	  display: block; 
+	}
+	.logo {
+	  position: absolute; 
+	  top: 10px; 
+	  left: 25px; 
+	  margin: 0; 
+	}
+  }
+  
+  @media (min-width: 769px) {
+	.menu {
+	  display: flex;
+	}
+  
+	#menuToggle {
+	  display: none;
+	}
+  
+  }
+  /* navbar */
+  .filter-btn {
+	color: #d35f20 !important;
+	border-color: #d35f20 !important;
+}
+
+.filter-btn:hover {
+	background-color: #d35f20 !important;
+	color: #fff !important;
+}
+
+.custom-text {
+	color: #d35f20;
+}
+#searchInput:focus {
+	border-color: #d35f20;
+	box-shadow: 0 0 5px #d35f20; /* Optional glow effect */
+	outline: none; /* Remove default blue outline */
+} 
+/* Cart and Clear Cart Links */
+#viewCart, #clearCart, #viewCartMobile, #clearCartMobile {
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	font-size: 20px;
+	transition: color 0.3s;
+  }
+  @media (min-width: 400px) {
+	#viewCart {
+		color: rgb(0, 0, 0);
+	}
+}
+@media (min-width: 1080px) {
+	#viewCart {
+		color: rgb(255, 255, 255);
+	}
+}
+@media (min-width: 768px) {
+	#viewCart {
+		color: rgb(255, 255, 255);
+	}
+}
+  
+  #viewCart:hover, #clearCart:hover, #viewCartMobile:hover, #clearCartMobile:hover {
+	color: #f0a500;
+  }
+  
+  #cartCount, #cartCountMobile {
+	font-weight: bold;
+  }
+  .image-container {
+    width: 100%; /* Full width of the container */
+    height: 200px; /* Fixed height for uniformity */
+    overflow: hidden; /* Ensure excess parts of the image are hidden */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 100%; /* Adjust width to container */
+    height: 100%; /* Adjust height to container */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+  

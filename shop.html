@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="./assets/css/shop.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</head>
+<body style="background-color: #cec1c1;">
+  <!-- navbar -->
+  <nav>
+    <div class="logo">Grills Inn</div>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li>
+        <a href="#" id="viewCart" data-bs-toggle="modal" data-bs-target="#cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+            <path d="M0 1a1 1 0 0 1 1-1h1.11a1 1 0 0 1 .894.553L3.57 2H14a1 1 0 0 1 .964 1.265l-1.5 7A1 1 0 0 1 12.5 11H4.118l-.573 1.146a1 1 0 0 1-.894.553H1a1 1 0 0 1 0-2h1.118l1.571-3.143L2.11 3H1a1 1 0 0 1-1-1Zm4.11 3H11l1.5 7H4.11L2.641 4ZM5 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0Zm5 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z"/>
+          </svg> 
+          Cart (<span id="cartCount">0</span>)
+        </a>
+      </li>
+    </ul>
+    <!-- Hamburger Menu -->
+    <div id="menuToggle">
+      <input type="checkbox" id="menuCheckbox" class="menu-toggle">
+      <label for="menuCheckbox">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </label>
+      <ul id="menu" class="navmenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li>
+            <a href="#" id="viewCart" data-bs-toggle="modal" data-bs-target="#cart">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-cart" viewBox="0 0 16 16">
+                <path d="M0 1a1 1 0 0 1 1-1h1.11a1 1 0 0 1 .894.553L3.57 2H14a1 1 0 0 1 .964 1.265l-1.5 7A1 1 0 0 1 12.5 11H4.118l-.573 1.146a1 1 0 0 1-.894.553H1a1 1 0 0 1 0-2h1.118l1.571-3.143L2.11 3H1a1 1 0 0 1-1-1Zm4.11 3H11l1.5 7H4.11L2.641 4ZM5 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0Zm5 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z"/>
+              </svg> 
+<!-- Mobile View -->
+            Cart (<span id="cartCountMobile">0</span>)
+            </a>
+          </li>
+      </ul>
+    </div>
+  </nav>
+
+<!-- Filters and Search -->
+<div class="container mt-5 px-4">
+    <div class="row">
+        <div class="col-md-12 mb-3">
+            <input type="text" id="searchInput" class="form-control" placeholder="Search for products..." />
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-md-12 d-flex flex-wrap gap-2">
+            <button class="btn btn-outline-primary filter-btn" data-category="burgers">Burgers</button>
+            <button class="btn btn-outline-primary filter-btn" data-category="pizza">Pizza</button>
+            <button class="btn btn-outline-primary filter-btn" data-category="pasta">Pasta</button>
+            <button class="btn btn-outline-primary filter-btn" data-category="tandoori">Tandoori</button>
+            <button class="btn btn-outline-primary filter-btn" data-category="frenchfries">French Fries</button>
+            <button class="btn btn-outline-primary filter-btn" data-category="momos">Momos</button>
+            <button class="btn btn-outline-primary filter-btn" data-category="sandwich">Sandwich</button>
+            <button class="btn btn-outline-primary filter-btn" data-category="kfc">KFC</button>
+            <button class="btn btn-outline-primary filter-btn" data-category="biryani">Biryani</button>
+            <button class="btn btn-outline-primary filter-btn" data-category="kebab">Kebab</button>
+        </div>
+    </div>
+</div>
+
+<!-- Products Section -->
+<div class="container px-4">
+  <!-- Category: Burgers -->
+    <h2 class="mt-4">Burgers</h2>
+    <div class="row" data-category="burgers">
+        <div class="col-md-4 product">
+            <div class="card">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200" class="card-img-top" alt="Cheese Burger">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Cheese Burger</h5>
+                    <p class="card-text">Price: $5.00</p>
+                    <a href="#" data-name="Cheese Burger" data-price="5.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 product">
+            <div class="card">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200" class="card-img-top" alt="Chicken Burger">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Chicken Burger</h5>
+                    <p class="card-text">Price: $5.00</p>
+                    <a href="#" data-name="Chicken Burger" data-price="5.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <!-- Add other burger products here -->
+    </div>
+
+    <!-- Category: Pizza -->
+    <h2 class="mt-4">Pizza</h2>
+    <div class="row" data-category="pizza">
+        <div class="col-md-4 product">
+            <div class="card">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/200" class="card-img-top" alt="Margherita Pizza">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Margherita Pizza</h5>
+                    <p class="card-text">Price: $8.00</p>
+                    <a href="#" data-name="Margherita Pizza" data-price="8.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <!-- Add other pizza products here -->
+    </div>
+
+    <!-- Repeat for Other Categories -->
+    <h2 class="mt-4">Pasta</h2>
+    <div class="row" data-category="pasta">
+        <!-- Add pasta products here -->
+    </div>
+
+    <h2 class="mt-4">Tandoori</h2>
+    <div class="row" data-category="tandoori">
+        <!-- Add tandoori products here -->
+    </div>
+
+    <h2 class="mt-4">French Fries</h2>
+    <div class="row" data-category="frenchfries">
+        <!-- Add french fries products here -->
+    </div>
+
+    <!-- Repeat similarly for Momos, Sandwich, KFC, Biryani, and Kebab -->
+</div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="cart" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Your Cart</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="show-cart table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <div class="text-end">
+                        <strong>Total Price: $<span class="total-cart">0.00</span></strong>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/shop.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const filterButtons = document.querySelectorAll(".filter-btn");
+            const products = document.querySelectorAll(".product");
+            const searchInput = document.querySelector("#search-input");
+          
+            // Filter Functionality
+            filterButtons.forEach((button) => {
+              button.addEventListener("click", () => {
+                const category = button.getAttribute("data-category");
+          
+                // Show/Hide products based on the category
+                products.forEach((product) => {
+                  const productCategory = product.closest("[data-category]").getAttribute("data-category");
+                  if (category === "all" || productCategory === category) {
+                    product.style.display = "block";
+                  } else {
+                    product.style.display = "none";
+                  }
+                });
+          
+                // Trigger search to refine the filtered products
+                applySearch();
+              });
+            });
+          
+            // Search Functionality
+            searchInput.addEventListener("input", () => {
+              applySearch();
+            });
+          
+            // Search logic that works with current filter
+            function applySearch() {
+              const searchTerm = searchInput.value.toLowerCase();
+              products.forEach((product) => {
+                const isVisible = product.style.display !== "none";
+                const productName = product.querySelector(".product-name").textContent.toLowerCase();
+          
+                // Show product only if it matches the search term and is currently visible in the filter
+                if (productName.includes(searchTerm) && isVisible) {
+                  product.style.display = "block";
+                } else {
+                  product.style.display = "none";
+                }
+              });
+            }
+          });
+          
+    </script>
+</body>
+</html>
