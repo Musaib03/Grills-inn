@@ -21,7 +21,7 @@
         <a href="#" id="viewCart" data-bs-toggle="modal" data-bs-target="#cart">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
             <path d="M0 1a1 1 0 0 1 1-1h1.11a1 1 0 0 1 .894.553L3.57 2H14a1 1 0 0 1 .964 1.265l-1.5 7A1 1 0 0 1 12.5 11H4.118l-.573 1.146a1 1 0 0 1-.894.553H1a1 1 0 0 1 0-2h1.118l1.571-3.143L2.11 3H1a1 1 0 0 1-1-1Zm4.11 3H11l1.5 7H4.11L2.641 4ZM5 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0Zm5 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z"/>
-          </svg> 
+          </svg>
           Cart (<span id="cartCount">0</span>)
         </a>
       </li>
@@ -43,7 +43,7 @@
             <a href="#" id="viewCart" data-bs-toggle="modal" data-bs-target="#cart">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-cart" viewBox="0 0 16 16">
                 <path d="M0 1a1 1 0 0 1 1-1h1.11a1 1 0 0 1 .894.553L3.57 2H14a1 1 0 0 1 .964 1.265l-1.5 7A1 1 0 0 1 12.5 11H4.118l-.573 1.146a1 1 0 0 1-.894.553H1a1 1 0 0 1 0-2h1.118l1.571-3.143L2.11 3H1a1 1 0 0 1-1-1Zm4.11 3H11l1.5 7H4.11L2.641 4ZM5 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0Zm5 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z"/>
-              </svg> 
+              </svg>
 <!-- Mobile View -->
             Cart (<span id="cartCountMobile">0</span>)
             </a>
@@ -54,94 +54,88 @@
 
 <!-- Filters and Search -->
 <div class="container mt-5 px-4">
-    <div class="row">
-        <div class="col-md-12 mb-3">
-            <input type="text" id="searchInput" class="form-control" placeholder="Search for products..." />
-        </div>
-    </div>
-    <div class="row mb-4">
-        <div class="col-md-12 d-flex flex-wrap gap-2">
-            <button class="btn btn-outline-primary filter-btn" data-category="burgers">Burgers</button>
-            <button class="btn btn-outline-primary filter-btn" data-category="pizza">Pizza</button>
-            <button class="btn btn-outline-primary filter-btn" data-category="pasta">Pasta</button>
-            <button class="btn btn-outline-primary filter-btn" data-category="tandoori">Tandoori</button>
-            <button class="btn btn-outline-primary filter-btn" data-category="frenchfries">French Fries</button>
-            <button class="btn btn-outline-primary filter-btn" data-category="momos">Momos</button>
-            <button class="btn btn-outline-primary filter-btn" data-category="sandwich">Sandwich</button>
-            <button class="btn btn-outline-primary filter-btn" data-category="kfc">KFC</button>
-            <button class="btn btn-outline-primary filter-btn" data-category="biryani">Biryani</button>
-            <button class="btn btn-outline-primary filter-btn" data-category="kebab">Kebab</button>
-        </div>
-    </div>
+  <div class="row">
+      <div class="col-md-12 mb-3">
+          <input type="text" id="searchInput" class="form-control" placeholder="Search for products..." />
+      </div>
+  </div>
+  <div class="row mb-4">
+      <div class="col-md-12 d-flex flex-wrap gap-2">
+          <button class="btn btn-outline-primary filter-btn" data-category="all">All</button>
+          <button class="btn btn-outline-primary filter-btn" data-category="burgers">Burgers</button>
+          <button class="btn btn-outline-primary filter-btn" data-category="pizza">Pizza</button>
+          <button class="btn btn-outline-primary filter-btn" data-category="pasta">Pasta</button>
+          <button class="btn btn-outline-primary filter-btn" data-category="tandoori">Tandoori</button>
+          <button class="btn btn-outline-primary filter-btn" data-category="frenchfries">French Fries</button>
+          <button class="btn btn-outline-primary filter-btn" data-category="momos">Momos</button>
+          <button class="btn btn-outline-primary filter-btn" data-category="sandwich">Sandwich</button>
+          <button class="btn btn-outline-primary filter-btn" data-category="kfc">KFC</button>
+          <button class="btn btn-outline-primary filter-btn" data-category="biryani">Biryani</button>
+          <button class="btn btn-outline-primary filter-btn" data-category="kebab">Kebab</button>
+      </div>
+  </div>
 </div>
+<div id="cartPopup" class="popup"></div>
 
 <!-- Products Section -->
 <div class="container px-4">
   <!-- Category: Burgers -->
-    <h2 class="mt-4">Burgers</h2>
-    <div class="row" data-category="burgers">
-        <div class="col-md-4 product">
-            <div class="card">
-                <div class="image-container">
-                    <img src="https://via.placeholder.com/200" class="card-img-top" alt="Cheese Burger">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Cheese Burger</h5>
-                    <p class="card-text">Price: $5.00</p>
-                    <a href="#" data-name="Cheese Burger" data-price="5.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 product">
-            <div class="card">
-                <div class="image-container">
-                    <img src="https://via.placeholder.com/200" class="card-img-top" alt="Chicken Burger">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Chicken Burger</h5>
-                    <p class="card-text">Price: $5.00</p>
-                    <a href="#" data-name="Chicken Burger" data-price="5.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-        <!-- Add other burger products here -->
-    </div>
+  <h2 class="mt-4">Burgers</h2>
+  <div class="row product-group" data-category="burgers">
+      <div class="col-md-4 product">
+          <div class="card">
+              <div class="image-container">
+                  <img src="https://via.placeholder.com/200" class="card-img-top" alt="Cheese Burger">
+              </div>
+              <div class="card-body">
+                  <h5 class="card-title product-name">Cheese Burger</h5>
+                  <p class="card-text">Price: $5.00</p>
+                  <a href="#" data-name="Cheese Burger" data-price="5.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;">Add to Cart</a>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4 product">
+          <div class="card">
+              <div class="image-container">
+                  <img src="https://via.placeholder.com/200" class="card-img-top" alt="Chicken Burger">
+              </div>
+              <div class="card-body">
+                  <h5 class="card-title product-name">Chicken Burger</h5>
+                  <p class="card-text">Price: $5.00</p>
+                  <a href="#" data-name="Chicken Burger" data-price="5.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;">Add to Cart</a>
+              </div>
+          </div>
+      </div>
+  </div>
 
-    <!-- Category: Pizza -->
-    <h2 class="mt-4">Pizza</h2>
-    <div class="row" data-category="pizza">
-        <div class="col-md-4 product">
-            <div class="card">
-                <div class="image-container">
-                    <img src="https://via.placeholder.com/200" class="card-img-top" alt="Margherita Pizza">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Margherita Pizza</h5>
-                    <p class="card-text">Price: $8.00</p>
-                    <a href="#" data-name="Margherita Pizza" data-price="8.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-        <!-- Add other pizza products here -->
-    </div>
-
-    <!-- Repeat for Other Categories -->
-    <h2 class="mt-4">Pasta</h2>
-    <div class="row" data-category="pasta">
-        <!-- Add pasta products here -->
-    </div>
-
-    <h2 class="mt-4">Tandoori</h2>
-    <div class="row" data-category="tandoori">
-        <!-- Add tandoori products here -->
-    </div>
-
-    <h2 class="mt-4">French Fries</h2>
-    <div class="row" data-category="frenchfries">
-        <!-- Add french fries products here -->
-    </div>
-
-    <!-- Repeat similarly for Momos, Sandwich, KFC, Biryani, and Kebab -->
+  <!-- Category: Pizza -->
+  <h2 class="mt-4">Pizza</h2>
+  <div class="row product-group" data-category="pizza">
+      <div class="col-md-4 product">
+          <div class="card">
+              <div class="image-container">
+                  <img src="https://via.placeholder.com/200" class="card-img-top" alt="Margherita Pizza">
+              </div>
+              <div class="card-body">
+                  <h5 class="card-title product-name">Margherita Pizza</h5>
+                  <p class="card-text">Price: $8.00</p>
+                  <a href="#" data-name="Margherita Pizza" data-price="8.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;">Add to Cart</a>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4 product">
+          <div class="card">
+              <div class="image-container">
+                  <img src="https://via.placeholder.com/200" class="card-img-top" alt="Pepperoni Pizza">
+              </div>
+              <div class="card-body">
+                  <h5 class="card-title product-name">Pepperoni Pizza</h5>
+                  <p class="card-text">Price: $9.00</p>
+                  <a href="#" data-name="Pepperoni Pizza" data-price="9.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;">Add to Cart</a>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
 
 
@@ -177,56 +171,72 @@
             </div>
         </div>
     </div>
+    <div id="notificationPopup" class="notification-popup"></div>
 
     <script src="./assets/js/shop.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const filterButtons = document.querySelectorAll(".filter-btn");
-            const products = document.querySelectorAll(".product");
-            const searchInput = document.querySelector("#search-input");
-          
-            // Filter Functionality
-            filterButtons.forEach((button) => {
+      document.addEventListener("DOMContentLoaded", () => {
+          const searchInput = document.getElementById("searchInput");
+          const filterButtons = document.querySelectorAll(".filter-btn");
+          const products = document.querySelectorAll(".product");
+
+          let currentCategory = "all"; 
+
+          // Filter Functionality
+          filterButtons.forEach((button) => {
               button.addEventListener("click", () => {
-                const category = button.getAttribute("data-category");
-          
-                // Show/Hide products based on the category
-                products.forEach((product) => {
-                  const productCategory = product.closest("[data-category]").getAttribute("data-category");
-                  if (category === "all" || productCategory === category) {
-                    product.style.display = "block";
-                  } else {
-                    product.style.display = "none";
-                  }
-                });
-          
-                // Trigger search to refine the filtered products
-                applySearch();
+                  currentCategory = button.getAttribute("data-category");
+                  filterProducts();
               });
-            });
-          
-            // Search Functionality
-            searchInput.addEventListener("input", () => {
-              applySearch();
-            });
-          
-            // Search logic that works with current filter
-            function applySearch() {
-              const searchTerm = searchInput.value.toLowerCase();
-              products.forEach((product) => {
-                const isVisible = product.style.display !== "none";
-                const productName = product.querySelector(".product-name").textContent.toLowerCase();
-          
-                // Show product only if it matches the search term and is currently visible in the filter
-                if (productName.includes(searchTerm) && isVisible) {
-                  product.style.display = "block";
-                } else {
-                  product.style.display = "none";
-                }
-              });
-            }
           });
-          
-    </script>
+
+          // Search Functionality
+          searchInput.addEventListener("input", () => {
+              filterProducts();
+          });
+
+          function filterProducts() {
+              const searchTerm = searchInput.value.toLowerCase();
+
+              products.forEach((product) => {
+                  const productName = product.querySelector(".product-name").textContent.toLowerCase();
+                  const productCategory = product.closest(".product-group").getAttribute("data-category");
+
+                  const matchesSearch = productName.includes(searchTerm);
+                  const matchesCategory = currentCategory === "all" || productCategory === currentCategory;
+
+                  if (matchesSearch && matchesCategory) {
+                      product.style.display = "block";
+                  } else {
+                      product.style.display = "none";
+                  }
+              });
+          }
+      });
+      document.addEventListener("DOMContentLoaded", () => {
+  const addToCartButtons = document.querySelectorAll(".add-to-cart");
+
+  addToCartButtons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      const productName = button.getAttribute("data-name");
+
+      showNotification(`${productName} sucessfully... added to cart!!!`);
+    });
+  });
+
+  function showNotification(message) {
+    const notificationPopup = document.getElementById("notificationPopup");
+    notificationPopup.textContent = message;
+    notificationPopup.style.display = "block";
+
+    setTimeout(() => {
+      notificationPopup.style.display = "none";
+    }, 3000);
+  }
+});
+
+  </script>
+
 </body>
 </html>
