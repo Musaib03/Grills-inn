@@ -75,7 +75,6 @@
       </div>
   </div>
 </div>
-<div id="cartPopup" class="popup"></div>
 
 <!-- Products Section -->
 <div class="container px-4">
@@ -90,7 +89,8 @@
               <div class="card-body">
                   <h5 class="card-title product-name">Cheese Burger</h5>
                   <p class="card-text">Price: $5.00</p>
-                  <a href="#" data-name="Cheese Burger" data-price="5.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;">Add to Cart</a>
+                  <a href="#" data-name="Cheese Burger" data-price="5.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;"onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
+                  onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">Add to Cart</a>
               </div>
           </div>
       </div>
@@ -102,7 +102,9 @@
               <div class="card-body">
                   <h5 class="card-title product-name">Chicken Burger</h5>
                   <p class="card-text">Price: $5.00</p>
-                  <a href="#" data-name="Chicken Burger" data-price="5.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;">Add to Cart</a>
+                  <a href="#" data-name="Chicken Burger" data-price="5.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;"onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
+                  onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">
+                  Add to Cart</a>
               </div>
           </div>
       </div>
@@ -119,7 +121,8 @@
               <div class="card-body">
                   <h5 class="card-title product-name">Margherita Pizza</h5>
                   <p class="card-text">Price: $8.00</p>
-                  <a href="#" data-name="Margherita Pizza" data-price="8.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;">Add to Cart</a>
+                  <a href="#" data-name="Margherita Pizza" data-price="8.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;"onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
+                  onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">Add to Cart</a>
               </div>
           </div>
       </div>
@@ -131,7 +134,8 @@
               <div class="card-body">
                   <h5 class="card-title product-name">Pepperoni Pizza</h5>
                   <p class="card-text">Price: $9.00</p>
-                  <a href="#" data-name="Pepperoni Pizza" data-price="9.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;">Add to Cart</a>
+                  <a href="#" data-name="Pepperoni Pizza" data-price="9.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;"onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
+                  onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">Add to Cart</a>
               </div>
           </div>
       </div>
@@ -180,7 +184,7 @@
           const filterButtons = document.querySelectorAll(".filter-btn");
           const products = document.querySelectorAll(".product");
 
-          let currentCategory = "all"; 
+          let currentCategory = "all";
 
           // Filter Functionality
           filterButtons.forEach((button) => {
