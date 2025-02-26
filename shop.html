@@ -75,6 +75,7 @@
       </div>
   </div>
 </div>
+<div id="cartPopup" class="popup"></div>
 
 <!-- Products Section -->
 <div class="container px-4">
@@ -170,6 +171,7 @@
             </div>
         </div>
     </div>
+    <div id="notificationPopup" class="notification-popup"></div>
 
     <script src="./assets/js/shop.js"></script>
     <script>
@@ -178,7 +180,7 @@
           const filterButtons = document.querySelectorAll(".filter-btn");
           const products = document.querySelectorAll(".product");
 
-          let currentCategory = "all"; // Track the selected category
+          let currentCategory = "all"; 
 
           // Filter Functionality
           filterButtons.forEach((button) => {
@@ -211,6 +213,29 @@
               });
           }
       });
+      document.addEventListener("DOMContentLoaded", () => {
+  const addToCartButtons = document.querySelectorAll(".add-to-cart");
+
+  addToCartButtons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      const productName = button.getAttribute("data-name");
+
+      showNotification(`${productName} sucessfully... added to cart!!!`);
+    });
+  });
+
+  function showNotification(message) {
+    const notificationPopup = document.getElementById("notificationPopup");
+    notificationPopup.textContent = message;
+    notificationPopup.style.display = "block";
+
+    setTimeout(() => {
+      notificationPopup.style.display = "none";
+    }, 3000);
+  }
+});
+
   </script>
 
 </body>
