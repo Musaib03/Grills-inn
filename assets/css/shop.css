@@ -224,7 +224,16 @@
     object-fit: cover;
 }
 
+.filter-btn {
+	background-color: #ffffff !important; /* Light orange background */
+	color: #000000 !important;           /* Dark blue text */
+	border-color: transparent !important; /* Transparent border */
+}
 
+.filter-btn:hover {
+	background-color: #d35f20 !important; /* Darker orange on hover */
+	color: #ffffff !important;           /* White text on hover */
+}
 #notificationPopup {
   position: fixed;
   top: 70px;
