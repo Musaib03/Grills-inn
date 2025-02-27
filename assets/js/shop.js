@@ -79,13 +79,13 @@ function displayCart() {
                 (item) => `
         <tr>
             <td>${item.name}</td>
-            <td>$${item.price}</td>
+            <td>₹${item.price}</td>
             <td>
                 <button class="btn btn-sm btn-primary minus-item" data-name="${item.name}">-</button>
                 ${item.count}
                 <button class="btn btn-sm btn-primary plus-item" data-name="${item.name}" data-price="${item.price}">+</button>
             </td>
-            <td>$${item.total}</td>
+            <td>₹${item.total}</td>
             <td><button class="btn btn-sm btn-danger delete-item" data-name="${item.name}">X</button></td>
         </tr>
     `
@@ -93,7 +93,7 @@ function displayCart() {
             .join("");
     }
 
-    if (totalCart) totalCart.textContent = shoppingCart.totalCart();
+    if (totalCart) totalCart.textContent = `${shoppingCart.totalCart()}`;
     if (totalCount) totalCount.textContent = shoppingCart.totalCount();
     updateCartCount();
 }
