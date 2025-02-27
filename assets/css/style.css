@@ -5,8 +5,8 @@ html {
 }
     /* Navbar Styles */
     nav {
-      position: sticky; 
-      top: 0; 
+      position: sticky;
+      top: 0;
       background-color: #d35f20;
       color: white;
       display: flex;
@@ -16,7 +16,7 @@ html {
       height: 50px;
       z-index: 10;
       opacity: 1;
-      transition: opacity 0.5s ease; 
+      transition: opacity 0.5s ease;
     }
 
     .logo {
@@ -52,9 +52,9 @@ html {
 /* Hamburger Menu */
 #menuToggle {
   position: absolute;
-  top: 25px; 
-  right: 15px; 
-  z-index: 15; 
+  top: 25px;
+  right: 15px;
+  z-index: 15;
 }
 
 #menuToggle label {
@@ -64,7 +64,7 @@ html {
   gap: 5px;
 }
 #menuToggle input {
-  display: none; 
+  display: none;
 }
 #menuToggle .bar {
   width: 25px;
@@ -120,20 +120,20 @@ html {
 
 /*hamburger menu only on mobile view */
 #menuToggle {
-  display: none; 
+  display: none;
 }
 .menu {
-  display: none; 
+  display: none;
 }
 @media (max-width: 768px) {
   #menuToggle {
-    display: block; 
+    display: block;
   }
   .logo {
-    position: absolute; 
-    top: 10px; 
-    left: 25px; 
-    margin: 0; 
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    margin: 0;
   }
 }
 
@@ -162,7 +162,8 @@ html {
   text-align: center;
   color: var(--white);
 }
-/* shading */
+
+/* Shading */
 .hero::before {
   content: '';
   position: absolute;
@@ -176,6 +177,9 @@ html {
 
 .hero-content {
   max-width: 600px;
+  position: relative;
+  z-index: 2;
+  margin-top:-150px;
 }
 
 .hero-subtitle {
@@ -197,18 +201,29 @@ html {
   margin-bottom: 30px;
 }
 
+/* Button Styling */
 .btn {
-  background-color: var(--deep-saffron);
-  color: var(--white);
-  padding: 10px 30px;
+  background-color: #d35f20;
+  color: white;
+  border: none;
+  padding: 10px 20px;
   border-radius: 5px;
-  font-size: 1.6rem;
-  font-weight: var(--fw-500);
-  transition: var(--transition-1);
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  /* margin-top:2.5rem; */
 }
-
+@media (max-width: 400px){
+  .btn{
+    margin-top: 2.5rem;
+  }
+}
 .btn:hover {
-  background-color: var(--dark-orange);
+  background-color: #b84e1a;
+  color: white;
+  transition: background-color 0.3s ease;
 }
 @media (max-width: 768px){
   .hero-subtitle{
@@ -233,7 +248,7 @@ html {
 
   }
   .hero {
-    height: 80vh;
+    height: 100vh;
 }
 }
 /* splide */
@@ -263,8 +278,8 @@ html {
     } */
     .splide__slide:hover {
       transform: translateY(-5px);
-      box-shadow: 0 4px 15px rgba(211, 95, 32, 3); 
-      /* background-color: #f0a500; Change background color to orange */      
+      box-shadow: 0 4px 15px rgba(211, 95, 32, 3);
+      /* background-color: #f0a500; Change background color to orange */
     }
     .product-name {
       font-size: 1.8rem;
@@ -275,8 +290,8 @@ html {
     }
     .product-image {
       width: 100%;
-      height: 100%; 
-      object-fit: cover; 
+      height: 100%;
+      object-fit: cover;
     }
     .product-description {
       font-size: 1rem;
@@ -284,11 +299,11 @@ html {
       margin-top: 1rem;
     }
     .image-container {
-      width: 200px; 
-      height: 200px; 
-      overflow: hidden; 
-      border-radius: 8px; 
-      margin: 0 auto; 
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 8px;
+      margin: 0 auto;
     }
 
     /* Responsive Styling */
@@ -306,10 +321,16 @@ html {
         z-index: 1;
       }
     }
+    @media (min-width: 400px) {
+      .splide__pagination {
+        bottom: -0.5em !important;
+      }
+    }
     @media screen and (max-width: 768px) {
       .about-content {
         margin-top: -40px !important;
       }
+    }
       @media screen and (max-width: 768px) {
         .about-banner img.about-img {
           margin-left: 40px !important;
