@@ -7,7 +7,7 @@ html {
     nav {
       position: sticky;
       top: 0;
-      background-color: #d35f20;
+      background-color: transparent; /* Start as transparent */
       color: white;
       display: flex;
       justify-content: space-around;
@@ -15,9 +15,15 @@ html {
       padding: 0.5rem 1rem;
       height: 50px;
       z-index: 10;
+      transition: background-color 0.3s ease, opacity 0.3s ease;
+  }
+
+  nav.scrolled {
+      background-color: #d35f20;
       opacity: 1;
-      transition: opacity 0.5s ease;
-    }
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
 
     .logo {
       font-size: 2rem;
@@ -338,23 +344,3 @@ html {
           margin-top: 70px;
         }
       }
-.container{
-  margin-bottom: -4rem;
-}
-footer{
-  margin-top: 3rem;
-}
-.contact-details h1{
-  font-size: 2rem;
-  color:#d35f20;
-}
-@media screen and (max-width: 768px) {
-  .section-text{
-    margin-top: 2.5rem;
-  }
-  .right iframe {
-    width: 100%;
-    height: 200px;
-    margin-left: 0rem;
-  }
-}
