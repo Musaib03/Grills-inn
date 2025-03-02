@@ -4,10 +4,11 @@ const shoppingCart = (() => {
 
     // Item constructor
     class Item {
-        constructor(name, price, count) {
+        constructor(name, price, count, size) {
             this.name = name;
             this.price = price;
             this.count = count;
+            this.size = size;
         }
     }
 
@@ -26,25 +27,25 @@ const shoppingCart = (() => {
 
     // Public methods
     return {
-        addItem(name, price, count) {
-            const item = cart.find((item) => item.name === name);
+        addItem(name, price, count, size) {
+            const item = cart.find((item) => item.name === name && item.size === size);
             if (item) {
                 item.count += count;
             } else {
-                cart.push(new Item(name, price, count));
+                cart.push(new Item(name, price, count, size));
             }
             saveCart();
         },
-        removeItem(name) {
-            const item = cart.find((item) => item.name === name);
+        removeItem(name, size) {
+            const item = cart.find((item) => item.name === name && item.size === size);
             if (item) {
                 item.count--;
-                if (item.count === 0) cart = cart.filter((item) => item.name !== name);
+                if (item.count === 0) cart = cart.filter((item) => !(item.name === name && item.size === size));
             }
             saveCart();
         },
-        deleteItem(name) {
-            cart = cart.filter((item) => item.name !== name);
+        deleteItem(name, size) {
+            cart = cart.filter((item) => !(item.name === name && item.size === size));
             saveCart();
         },
         clearCart() {
@@ -78,15 +79,15 @@ function displayCart() {
             .map(
                 (item) => `
         <tr>
-            <td>${item.name}</td>
+            <td>${item.name} (${item.size})</td>
             <td>$${item.price}</td>
             <td>
-                <button class="btn btn-sm btn-primary minus-item" data-name="${item.name}">-</button>
+                <button class="btn btn-sm btn-primary minus-item" data-name="${item.name}" data-size="${item.size}">-</button>
                 ${item.count}
-                <button class="btn btn-sm btn-primary plus-item" data-name="${item.name}" data-price="${item.price}">+</button>
+                <button class="btn btn-sm btn-primary plus-item" data-name="${item.name}" data-size="${item.size}" data-price="${item.price}">+</button>
             </td>
-            <td>$${item.total}</td>
-            <td><button class="btn btn-sm btn-danger delete-item" data-name="${item.name}">X</button></td>
+            <td>₹${item.total}</td>
+            <td><button class="btn btn-sm btn-danger delete-item" data-name="${item.name}" data-size="${item.size}">X</button></td>
         </tr>
     `
             )
@@ -113,8 +114,11 @@ document.addEventListener("click", (event) => {
     if (event.target.matches(".add-to-cart")) {
         event.preventDefault();
         const name = event.target.dataset.name;
-        const price = parseFloat(event.target.dataset.price);
-        shoppingCart.addItem(name, price, 1);
+        const selectElement = event.target.previousElementSibling; // The select element for size
+        const price = parseFloat(selectElement.value);
+        const size = selectElement.options[selectElement.selectedIndex].text;
+
+        shoppingCart.addItem(name, price, 1, size);
         displayCart();
     }
 
@@ -126,23 +130,35 @@ document.addEventListener("click", (event) => {
 
     if (event.target.matches(".minus-item")) {
         const name = event.target.dataset.name;
-        shoppingCart.removeItem(name);
+        const size = event.target.dataset.size;
+        shoppingCart.removeItem(name, size);
         displayCart();
     }
 
     if (event.target.matches(".plus-item")) {
         const name = event.target.dataset.name;
+        const size = event.target.dataset.size;
         const price = parseFloat(event.target.dataset.price);
-        shoppingCart.addItem(name, price, 1);
+        shoppingCart.addItem(name, price, 1, size);
         displayCart();
     }
 
     if (event.target.matches(".delete-item")) {
         const name = event.target.dataset.name;
-        shoppingCart.deleteItem(name);
+        const size = event.target.dataset.size;
+        shoppingCart.deleteItem(name, size);
         displayCart();
     }
 });
 
 // Initial display
 displayCart();
+
+// Handle size selection changes
+document.querySelectorAll(".size-select").forEach(select => {
+    select.addEventListener("change", function () {
+        const basePrice = parseFloat(select.dataset.basePrice);
+        const selectedPrice = parseFloat(select.value);
+        console.log(`Selected size price is now $${selectedPrice.toFixed(2)} (Base: $${basePrice.toFixed(2)})`);
+    });
+});
