@@ -184,7 +184,7 @@
 }
 /* Cart and Clear Cart Links */
 #viewCart, #clearCart, #viewCartMobile, #clearCartMobile {
-	color: rgb(255, 255, 255);
+	color: black;
 	text-decoration: none;
 	font-size: 20px;
 	transition: color 0.3s;
