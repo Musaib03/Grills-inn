@@ -94,7 +94,7 @@ function displayCart() {
             .join("");
     }
 
-    if (totalCart) totalCart.textContent = shoppingCart.totalCart();
+    if (totalCart) totalCart.textContent = `${shoppingCart.totalCart()}`;
     if (totalCount) totalCount.textContent = shoppingCart.totalCount();
     updateCartCount();
 }
