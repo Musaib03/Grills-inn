@@ -6,8 +6,8 @@ body {
 }
     /* Navbar Styles */
     nav {
-      position: sticky; 
-      top: 0; 
+      position: sticky;
+      top: 0;
       background-color: #d35f20;
       color: white;
       display: flex;
@@ -17,7 +17,7 @@ body {
       height: 50px;
       z-index: 10;
       opacity: 1;
-      transition: opacity 0.5s ease; 
+      transition: opacity 0.5s ease;
     }
 
     .logo {
@@ -53,9 +53,9 @@ body {
 /* Hamburger Menu */
 #menuToggle {
   position: absolute;
-  top: 25px; 
-  right: 15px; 
-  z-index: 15; 
+  top: 25px;
+  right: 15px;
+  z-index: 15;
 }
 
 #menuToggle label {
@@ -65,7 +65,7 @@ body {
   gap: 5px;
 }
 #menuToggle input {
-  display: none; 
+  display: none;
 }
 #menuToggle .bar {
   width: 25px;
@@ -121,20 +121,20 @@ body {
 
 /*hamburger menu only on mobile view */
 #menuToggle {
-  display: none; 
+  display: none;
 }
 .menu {
-  display: none; 
+  display: none;
 }
 @media (max-width: 768px) {
   #menuToggle {
-    display: block; 
+    display: block;
   }
   .logo {
-    position: absolute; 
-    top: 10px; 
-    left: 25px; 
-    margin: 0; 
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    margin: 0;
   }
 }
 
@@ -165,7 +165,7 @@ body {
   position: relative;
   flex: 1;
   max-width: 100%;
-  margin-bottom: 60px;
+  margin-bottom: 0px;
 }
 .about-banner img.about-img {
   width: 100%;
@@ -181,14 +181,28 @@ body {
 .about-content {
   flex: 1;
   text-align: left;
-  padding: 20px;
-  margin-bottom: 50px;
+  padding: 0px;
+  margin-bottom: 0px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .about-title {
   text-align: center;
   font-family: 'Lucida Handwriting', cursive;
   font-weight: bold;
   color:#d35f20;
+}
+
+.section-divider {
+  border: 1px solid aliceblue;
+  margin: 20px 50px;
+  border-radius: 20px;
+}
+@media screen and (max-width: 400px) {
+  .section-divider {
+    border: 1px solid aliceblue;
+    margin: 0px;
+    border-radius: 0px;
+  }
 }
 .section-title {
   font-size: 2rem;
@@ -200,6 +214,7 @@ body {
   color: #555;
   margin-bottom: 20px;
   line-height: 1.6;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .about-list {
   list-style: none;
@@ -214,7 +229,8 @@ body {
 }
 .about-item {
   margin-right: 10px;
-  color: #ff3c00;
+  color: #2e2623;
+  font-weight: 600;
 }
 .order-btn {
   background-color: #ff9500;
@@ -246,7 +262,8 @@ body {
   .about-content {
     max-width: 100%;
     flex: 1;
-    text-align: center;
+    text-align: left;
+    padding: 20px;
   }
   .about-content{
     margin-top: -150px;
@@ -257,13 +274,12 @@ body {
   .about-banner img.about-img{
     margin-left:0px;
     height:auto;
-    margin-top: 70px;
+    margin-top: 30px;
   }
-  .about-banner img.abs-img{
-    margin-top: 70px;
-  }
+
   .extra-banner img.extra-img{
-    height: auto;
+    height: 30vh;
+    /* width:120vw; */
   }
   .section-title {
     font-size: 2rem;
@@ -299,7 +315,7 @@ body {
 
 .extra-content, .extra-banner {
   flex: 1;
-  margin-top: 0px;
+  margin-top: 10px;
 }
 
 .container {
@@ -307,12 +323,13 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 8rem;
-  padding:0px 25px;
+  /* padding:40px 25px; */
 }
 
 .extra-content {
   max-width: 50%;
   text-align: left;
+  padding-top:25px;
 }
 
 .extra-content .section-title {
@@ -352,9 +369,9 @@ body {
 @media screen and (max-width: 768px) {
   .extra-content, .extra-banner {
     max-width: 100%;
-    text-align: center;
+    text-align: left;
   }
-  .container {
+  .container .extra-content{
     flex-direction: column;
     margin-top: -50px;
   }
