@@ -1,115 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us</title>
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"> -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book My Table</title>
     <link rel="stylesheet" href="./assets/css/contact.css" />
-  </head>
-  <body>
-    <!-- navbar -->
-    <nav>
-      <div class="logo">Grills Inn</div>
-      <ul class="menu">
+</head>
+<body>
+  <!-- navbar -->
+  <nav>
+    <div class="logo">Grills Inn</div>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li>
+        <a href="#" id="viewCart" data-bs-toggle="modal" data-bs-target="#cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+            <path d="M0 1a1 1 0 0 1 1-1h1.11a1 1 0 0 1 .894.553L3.57 2H14a1 1 0 0 1 .964 1.265l-1.5 7A1 1 0 0 1 12.5 11H4.118l-.573 1.146a1 1 0 0 1-.894.553H1a1 1 0 0 1 0-2h1.118l1.571-3.143L2.11 3H1a1 1 0 0 1-1-1Zm4.11 3H11l1.5 7H4.11L2.641 4ZM5 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0Zm5 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z" />
+          </svg>
+          Cart (<span id="cartCount">0</span>)
+        </a>
+      </li>
+    </ul>
+    <!-- Hamburger Menu -->
+    <div id="menuToggle">
+      <input type="checkbox" id="menuCheckbox" class="menu-toggle">
+      <label for="menuCheckbox">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </label>
+      <ul id="menu" class="navmenu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="contact.html">Contact Us</a></li>
         <li><a href="shop.html">Shop</a></li>
+        <li>
+            <a href="#" id="viewCart" data-bs-toggle="modal" data-bs-target="#cart">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-cart" viewBox="0 0 16 16">
+                <path d="M0 1a1 1 0 0 1 1-1h1.11a1 1 0 0 1 .894.553L3.57 2H14a1 1 0 0 1 .964 1.265l-1.5 7A1 1 0 0 1 12.5 11H4.118l-.573 1.146a1 1 0 0 1-.894.553H1a1 1 0 0 1 0-2h1.118l1.571-3.143L2.11 3H1a1 1 0 0 1-1-1Zm4.11 3H11l1.5 7H4.11L2.641 4ZM5 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0Zm5 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z"/>
+              </svg>
+<!-- Mobile View -->
+            Cart (<span id="cartCountMobile">0</span>)
+            </a>
+          </li>
       </ul>
-      <!-- Hamburger Menu -->
-      <div id="menuToggle">
-        <input type="checkbox" id="menuCheckbox" class="menu-toggle" />
-        <label for="menuCheckbox">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </label>
-        <ul id="menu" class="navmenu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="shop.html">Shop</a></li>
-        </ul>
-      </div>
-    </nav>
-    <div class="container">
-      <div class="left">
-        <div class="contact-details">
-          <h1>Contact Details</h1>
-          <p><b>Phone:</b> +123 456 7890</p>
-          <p><b>Email:</b> info@grillsin.com</p>
-          <p><b>Address:</b> 123 Lal Chonk, Kashmir</p>
-          <a
-            href="https://www.instagram.com/grills_inn_?igsh=MTdubDUxdXFkcHVoZQ=="
-            target="_blank"
-            style="text-decoration: none; color: inherit"
-          >
-            <svg
-              fill="#000000"
-              width="20px"
-              height="20px"
-              viewBox="0 0 0.6 0.6"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M0.271 0.05h0.059c0.042 0 0.052 0 0.074 0.002 0.027 0.001 0.045 0.005 0.061 0.012a0.123 0.123 0 0 1 0.044 0.029 0.123 0.123 0 0 1 0.029 0.044c0.006 0.016 0.01 0.034 0.012 0.061 0.001 0.026 0.002 0.035 0.002 0.097v0.013c0 0.062 0 0.071 -0.002 0.097 -0.001 0.027 -0.005 0.045 -0.012 0.061a0.123 0.123 0 0 1 -0.029 0.044 0.123 0.123 0 0 1 -0.044 0.029c-0.016 0.006 -0.034 0.01 -0.061 0.012 -0.026 0.001 -0.035 0.002 -0.097 0.002h-0.013c-0.062 0 -0.071 0 -0.097 -0.002 -0.027 -0.001 -0.045 -0.005 -0.061 -0.012a0.123 0.123 0 0 1 -0.044 -0.029 0.123 0.123 0 0 1 -0.029 -0.044c-0.006 -0.016 -0.01 -0.034 -0.012 -0.061 -0.001 -0.022 -0.001 -0.032 -0.001 -0.074v-0.059c0 -0.042 0 -0.052 0.002 -0.074 0.001 -0.027 0.005 -0.045 0.012 -0.061a0.123 0.123 0 0 1 0.029 -0.044A0.123 0.123 0 0 1 0.136 0.063c0.016 -0.006 0.034 -0.01 0.061 -0.012 0.022 -0.001 0.032 -0.001 0.074 -0.001h0.059zm0.048 0.045h-0.037c-0.05 0 -0.059 0 -0.083 0.001 -0.024 0.001 -0.038 0.005 -0.046 0.009 -0.012 0.005 -0.02 0.01 -0.029 0.019s-0.014 0.017 -0.019 0.029c-0.003 0.009 -0.007 0.022 -0.009 0.046 -0.001 0.024 -0.001 0.033 -0.001 0.083v0.037c0 0.05 0 0.059 0.001 0.083 0.001 0.024 0.005 0.038 0.009 0.046 0.005 0.012 0.01 0.02 0.019 0.029s0.017 0.014 0.029 0.019c0.009 0.003 0.022 0.007 0.046 0.009 0.026 0.001 0.034 0.001 0.101 0.001s0.075 0 0.101 -0.001c0.024 -0.001 0.038 -0.005 0.046 -0.009 0.012 -0.004 0.02 -0.01 0.029 -0.019s0.014 -0.017 0.019 -0.029c0.003 -0.009 0.007 -0.022 0.009 -0.046 0.001 -0.026 0.001 -0.034 0.001 -0.101s0 -0.075 -0.001 -0.101c-0.001 -0.024 -0.005 -0.038 -0.009 -0.046a0.078 0.078 0 0 0 -0.019 -0.029 0.078 0.078 0 0 0 -0.029 -0.019c-0.009 -0.003 -0.022 -0.007 -0.046 -0.009 -0.024 -0.001 -0.033 -0.001 -0.083 -0.001M0.3 0.175a0.125 0.125 0 1 1 0 0.25 0.125 0.125 0 0 1 0 -0.25m0 0.044a0.081 0.081 0 1 0 0 0.162 0.081 0.081 0 0 0 0 -0.162m0.135 -0.086a0.031 0.031 0 1 1 0 0.063 0.031 0.031 0 0 1 0 -0.063"
-              />
-            </svg>
-            <span style="font-size: 1.2rem;">instagram</span>
-          </a>
-          <a
-            class="social-link"
-            href="https://www.facebook.com/grillsinn"
-            target="_blank"
-          >
-            <svg
-              fill="#000000"
-              width="20px"
-              height="20px"
-              viewBox="0 0 0.8 0.8"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>facebook</title>
-              <path
-                d="M0.775 0.402C0.775 0.195 0.607 0.027 0.4 0.027S0.025 0.195 0.025 0.402c0 0.186 0.136 0.341 0.314 0.37l0.002 0V0.511H0.246v-0.108h0.095v-0.083a0.132 0.132 0 0 1 0.142 -0.146l0 0c0.03 0 0.059 0.003 0.087 0.008l-0.003 0v0.092h-0.047a0.054 0.054 0 0 0 -0.061 0.059l0 0v0.07h0.104l-0.017 0.108h-0.087v0.262c0.18 -0.029 0.316 -0.184 0.316 -0.37"
-              />
-            </svg>
-            <span>grillsinn</span>
-          </a>
-        </div>
-        <div class="book-table">
-          <h2>Book a Table</h2>
-          <form id="frm">
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
-            <input rel="type" ="datetime-local" required />
-            <button type="submit">Book Now</button>
-          </form>
-        </div>
-      </div>
-      <div class="right">
-        <!-- <h1>Location</h1> -->
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.5291435224476!2d75.08216417537339!3d33.721130835142105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e205001ea40c51%3A0xe6dd51eec767c5d1!2sGrills%20inn%20restaurant!5e0!3m2!1sen!2sin!4v1739006732597!5m2!1sen!2sin"
-          width="600"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
     </div>
-    <footer>
+  </nav>
+
+
+    <!-- Main Section -->
+    <div class="container">
+        <!-- Booking Form -->
+        <div class="card">
+            <h2>Book Your Table</h2>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Reservation Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Reservation Time</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+    <!-- Social Links -->
+   <div class="right-section">
+    <div class="social-links">
+      <a href="#" title="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878V15.89h-2.54v-2.56h2.54v-1.95c0-2.513 1.493-3.89 3.777-3.89 1.095 0 2.24.195 2.24.195v2.47h-1.262c-1.242 0-1.628.771-1.628 1.56v1.62h2.773l-.443 2.56h-2.33v5.988C18.343 21.128 22 16.991 22 12z"/>
+          </svg>
+          Facebook
+      </a>
+      <a href="#" title="Twitter">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M22.46 6c-.77.35-1.6.59-2.46.7a4.24 4.24 0 0 0 1.86-2.34c-.82.48-1.72.82-2.68 1-1.54-1.65-4.14-1.65-5.68 0a4.2 4.2 0 0 0-1.19 2.87 11.93 11.93 0 0 1-8.66-4.39 4.2 4.2 0 0 0 1.3 5.61 4.14 4.14 0 0 1-1.9-.52v.05a4.2 4.2 0 0 0 3.36 4.1 4.26 4.26 0 0 1-1.89.07 4.2 4.2 0 0 0 3.93 2.92A8.4 8.4 0 0 1 2 19.52 11.86 11.86 0 0 0 8.29 21c7.69 0 11.9-6.39 11.9-11.92 0-.18 0-.36-.02-.54A8.57 8.57 0 0 0 22.46 6z"/>
+          </svg>
+          Twitter
+      </a>
+      <a href="#" title="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.056 1.97.25 2.43.412.58.203 1 .445 1.442.887.442.442.684.862.887 1.442.162.46.356 1.26.412 2.43.058 1.265.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.25 1.97-.412 2.43-.203.58-.445 1-.887 1.442-.442.442-.862.684-1.442.887-.46.162-1.26.356-2.43.412-1.265.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.97-.25-2.43-.412-.58-.203-1-.445-1.442-.887-.442-.442-.684-.862-.887-1.442-.162-.46-.356-1.26-.412-2.43-.058-1.265-.07-1.65-.07-4.85s.012-3.584.07-4.85c.056-1.17.25-1.97.412-2.43.203-.58.445-1 .887-1.442.442-.442.862-.684 1.442-.887.46-.162 1.26-.356 2.43-.412 1.265-.058 1.65-.07 4.85-.07m0-2.2C8.715 0 8.29.016 7.2.07c-1.18.057-1.99.25-2.66.508-.98.384-1.76.93-2.532 1.702C.93 3.388.384 4.168 0 5.148c-.258.67-.452 1.48-.508 2.66C-.016 8.29 0 8.715 0 12s-.016 3.71.07 4.8c.057 1.18.25 1.99.508 2.66.384.98.93 1.76 1.702 2.532.772.772 1.552 1.318 2.532 1.702.67.258 1.48.452 2.66.508 1.09.054 1.515.07 4.8.07s3.71-.016 4.8-.07c1.18-.057 1.99-.25 2.66-.508.98-.384 1.76-.93 2.532-1.702.772-.772 1.318-1.552 1.702-2.532.258-.67.452-1.48.508-2.66.054-1.09.07-1.515.07-4.8s-.016-3.71-.07-4.8c-.057-1.18-.25-1.99-.508-2.66-.384-.98-.93-1.76-1.702-2.532-.772-.772-1.552-1.318-2.532-1.702-.67-.258-1.48-.452-2.66-.508C15.71-.016 15.285 0 12 0z"/>
+              <circle cx="12" cy="12" r="3.5"/>
+              <circle cx="18.5" cy="5.5" r="1.5"/>
+          </svg>
+          Instagram
+      </a>
+  </div>
+
+        <!-- Map -->
+        <div class="card-map">
+          <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.5291435224476!2d75.08216417537339!3d33.721130835142105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e205001ea40c51%3A0xe6dd51eec767c5d1!2sGrills%20inn%20restaurant!5e0!3m2!1sen!2sin!4v1739006732597!5m2!1sen!2sin"
+              height="450"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+      </div>
+  </div>
+</div>
+
+  <footer style="margin-bottom:0;">
       © 2025 Grills Inn. Made with ❤️ by Musaib Wani and Vinit Choudhary.
-    </footer>
-  </body>
+  </footer>
+
+</body>
 </html>
