@@ -179,6 +179,9 @@
 	box-shadow: 0 0 5px #d35f20;
 	outline: none;
 }
+.btn-primary{
+	margin-top: 10px;
+}
 /* Cart and Clear Cart Links */
 #viewCart, #clearCart, #viewCartMobile, #clearCartMobile {
 	color: rgb(255, 255, 255);

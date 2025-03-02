@@ -84,33 +84,23 @@
       <div class="col-md-4 product">
           <div class="card">
               <div class="image-container">
-                  <img src="https://via.placeholder.com/200" class="card-img-top" alt="Cheese Burger">
+                  <img src="assets/images/cheeseBurger.jpg" class="card-img-top" alt="Cheese Burger">
               </div>
               <div class="card-body">
                   <h5 class="card-title product-name">Cheese Burger</h5>
-                  <p class="card-text">Price: $5.00</p>
-                  <a href="#" data-name="Cheese Burger" data-price="5.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;"onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
-                  onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">Add to Cart</a>
-              </div>
-          </div>
-      </div>
-      <div class="col-md-4 product">
-          <div class="card">
-              <div class="image-container">
-                  <img src="https://via.placeholder.com/200" class="card-img-top" alt="Chicken Burger">
-              </div>
-              <div class="card-body">
-                  <h5 class="card-title product-name">Chicken Burger</h5>
-                  <p class="card-text">Price: $5.00</p>
-                  <a href="#" data-name="Chicken Burger" data-price="5.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;"onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
-                  onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">
-                  Add to Cart</a>
+                  <!-- <p class="card-text">Price: $<span class="product-price">5.00</span></p> -->
+                  <select class="form-select size-select" aria-label="Select size" data-base-price="5.00">
+                      <option value="5.00">Regular - ₹ 5.00</option>
+                      <option value="6.50">Medium - ₹ 6.50</option>
+                      <option value="8.00">Large - ₹ 8.00</option>
+                  </select>
+                  <a href="#" data-name="Cheese Burger" data-price="5.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;" onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
+                      onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">Add to Cart</a>
               </div>
           </div>
       </div>
   </div>
 
-  <!-- Category: Pizza -->
   <h2 class="mt-4">Pizza</h2>
   <div class="row product-group" data-category="pizza">
       <div class="col-md-4 product">
@@ -120,52 +110,14 @@
               </div>
               <div class="card-body">
                   <h5 class="card-title product-name">Margherita Pizza</h5>
-                  <p class="card-text">Price: $8.00</p>
-                  <a href="#" data-name="Margherita Pizza" data-price="8.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;"onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
-                  onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">Add to Cart</a>
-              </div>
-          </div>
-      </div>
-      <div class="col-md-4 product">
-          <div class="card">
-              <div class="image-container">
-                  <img src="https://via.placeholder.com/200" class="card-img-top" alt="Pepperoni Pizza">
-              </div>
-              <div class="card-body">
-                  <h5 class="card-title product-name">Pepperoni Pizza</h5>
-                  <p class="card-text">Price: $9.00</p>
-                  <a href="#" data-name="Pepperoni Pizza" data-price="9.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;"onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
-                  onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">Add to Cart</a>
-              </div>
-          </div>
-      </div>
-  </div>
-  <!-- Category: Pizza -->
-  <h2 class="mt-4">Pizza</h2>
-  <div class="row product-group" data-category="pizza">
-      <div class="col-md-4 product">
-          <div class="card">
-              <div class="image-container">
-                  <img src="https://via.placeholder.com/200" class="card-img-top" alt="Margherita Pizza">
-              </div>
-              <div class="card-body">
-                  <h5 class="card-title product-name">Margherita Pizza</h5>
-                  <p class="card-text">Price: $8.00</p>
-                  <a href="#" data-name="Margherita Pizza" data-price="8.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;"onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
-                  onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">Add to Cart</a>
-              </div>
-          </div>
-      </div>
-      <div class="col-md-4 product">
-          <div class="card">
-              <div class="image-container">
-                  <img src="https://via.placeholder.com/200" class="card-img-top" alt="Pepperoni Pizza">
-              </div>
-              <div class="card-body">
-                  <h5 class="card-title product-name">Pepperoni Pizza</h5>
-                  <p class="card-text">Price: $9.00</p>
-                  <a href="#" data-name="Pepperoni Pizza" data-price="9.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;"onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
-                  onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">Add to Cart</a>
+                  <!-- <p class="card-text">Price: $<span class="product-price">8.00</span></p> -->
+                  <select class="form-select size-select" aria-label="Select size" data-base-price="8.00">
+                      <option value="8.00">Regular - ₹ 8.00</option>
+                      <option value="10.00">Medium - ₹ 10.00</option>
+                      <option value="12.00">Large - ₹ 12.00</option>
+                  </select>
+                  <a href="#" data-name="Margherita Pizza" data-price="8.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;" onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
+                      onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">Add to Cart</a>
               </div>
           </div>
       </div>
@@ -176,134 +128,87 @@
         <div class="col-md-4 product">
             <div class="card">
                 <div class="image-container">
-                    <img src="https://via.placeholder.com/200" class="card-img-top" alt="Chicken Popcorn">
+                    <img src="/assets/images/chickenPopcorn.jpg" class="card-img-top" alt="Chicken Popcorn">
                 </div>
                 <div class="card-body">
                     <h5 class="card-title product-name">Chicken Popcorn</h5>
-                    <p class="card-text">Price: ₹ 100/10pcs</p>
-                    <a href="#" data-name="Chicken Popcorn" data-price="100.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;"onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
-                    onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">Add to Cart</a>
+                    <select class="form-select size-select" aria-label="Select size" data-base-price="5.00">
+                        <option value="5.00">10pcs - ₹ 100.00</option>
+                        <option value="6.50">15pcs - ₹ 150.00</option>
+                    </select>
+                    <a href="#" data-name="Chicken Popcorn" data-price="5.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;" onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
+                        onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">Add to Cart</a>
                 </div>
             </div>
         </div>
         <div class="col-md-4 product">
             <div class="card">
                 <div class="image-container">
-                    <img src="https://via.placeholder.com/200" class="card-img-top" alt="Chicken Popcorn">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title product-name">Chicken Popcorn</h5>
-                    <p class="card-text">Price: ₹ 150/15pcs</p>
-                    <a href="#" data-name="Chicken Popcorn" data-price="150.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;"onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
-                    onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 product">
-            <div class="card">
-                <div class="image-container">
-                    <img src="https://via.placeholder.com/200" class="card-img-top" alt="Chicken Strips">
+                    <img src="/assets/images/strips.jpg" class="card-img-top" alt="Chicken Popcorn">
                 </div>
                 <div class="card-body">
                     <h5 class="card-title product-name">Chicken Strips</h5>
-                    <p class="card-text">Price: ₹ 130/3pcs</p>
-                    <a href="#" data-name="Chicken Strips" data-price="130.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;"onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
-                    onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">Add to Cart</a>
+                    <!-- <p class="card-text">Price: $<span class="product-price">5.00</span></p> -->
+                    <select class="form-select size-select" aria-label="Select size" data-base-price="5.00">
+                        <option value="130.00">3pcs - ₹ 130.00</option>
+                        <option value="230.00">6pcs - ₹ 230.00</option>
+                    </select>
+                    <a href="#" data-name="Chicken Strips" data-price="5.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;" onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
+                        onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">Add to Cart</a>
                 </div>
             </div>
         </div>
-     <div class="col-md-4 product">
-        <div class="card">
-            <div class="image-container">
-                <img src="https://via.placeholder.com/200" class="card-img-top" alt="Chicken Strips">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title product-name">Chicken Strips</h5>
-                <p class="card-text">Price: ₹ 230/6pcs</p>
-                <a href="#" data-name="Chicken Strips" data-price="230.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;"onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
-                onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">Add to Cart</a>
-            </div>
-        </div>
-     </div>
-     <div class="col-md-4 product">
-        <div class="card">
-            <div class="image-container">
-                <img src="https://via.placeholder.com/200" class="card-img-top" alt="Chicken Wings">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title product-name">Chicken Wings</h5>
-                <p class="card-text">Price: ₹ 120/4pcs</p>
-                <a href="#" data-name="Chicken Wings" data-price="120.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;"onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
-                onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">Add to Cart</a>
+        <div class="col-md-4 product">
+            <div class="card">
+                <div class="image-container">
+                    <img src="/assets/images/wings.webp" class="card-img-top" alt="Chicken Popcorn">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title product-name">Chicken Wings</h5>
+                    <!-- <p class="card-text">Price: $<span class="product-price">5.00</span></p> -->
+                    <select class="form-select size-select" aria-label="Select size" data-base-price="5.00">
+                        <option value="130.00">4pcs - ₹ 120.00</option>
+                        <option value="230.00">8pcs - ₹ 220.00</option>
+                    </select>
+                    <a href="#" data-name="Chicken Wings" data-price="5.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;" onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
+                        onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">Add to Cart</a>
+                </div>
             </div>
         </div>
-     </div>
-     <div class="col-md-4 product">
-        <div class="card">
-            <div class="image-container">
-                <img src="https://via.placeholder.com/200" class="card-img-top" alt="Chicken Wings">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title product-name">Chicken Wings</h5>
-                <p class="card-text">Price: ₹ 220/8pcs</p>
-                <a href="#" data-name="Chicken Wings" data-price="220.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;"onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
-                onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">Add to Cart</a>
-            </div>
-        </div>
-     </div>
-     <div class="col-md-4 product">
-        <div class="card">
-            <div class="image-container">
-                <img src="https://via.placeholder.com/200" class="card-img-top" alt="KFC chicken boneless">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title product-name">KFC Chicken Boneless</h5>
-                <p class="card-text">Price: ₹ 300/8pcs</p>
-                <a href="#" data-name="KFC Chicken Boneless" data-price="300.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;"onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
-                onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">Add to Cart</a>
+        <div class="col-md-4 product">
+            <div class="card">
+                <div class="image-container">
+                    <img src="/assets/images/kfcboneless.jpg" class="card-img-top" alt="KFC Boneless">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title product-name">KFC Boneless</h5>
+                    <!-- <p class="card-text">Price: $<span class="product-price">5.00</span></p> -->
+                    <select class="form-select size-select" aria-label="Select size" data-base-price="5.00">
+                        <option value="130.00">8pcs - ₹ 300.00</option>
+                        <option value="230.00">6pcs - ₹ 600.00</option>
+                    </select>
+                    <a href="#" data-name="KFC Boneless" data-price="5.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;" onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
+                        onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">Add to Cart</a>
+                </div>
             </div>
         </div>
-     </div>
-     <div class="col-md-4 product">
-        <div class="card">
-            <div class="image-container">
-                <img src="https://via.placeholder.com/200" class="card-img-top" alt="KFC chicken boneless">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title product-name">KFC Chicken Boneless</h5>
-                <p class="card-text">Price: ₹ 600/16pcs</p>
-                <a href="#" data-name="KFC Chicken Boneless" data-price="600.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;"onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
-                onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">Add to Cart</a>
-            </div>
-        </div>
-     </div>
-     <div class="col-md-4 product">
-        <div class="card">
-            <div class="image-container">
-                <img src="https://via.placeholder.com/200" class="card-img-top" alt="KFC chicken with Blone">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title product-name">KFC Chicken with Blone</h5>
-                <p class="card-text">Price: ₹ 280/8pcs</p>
-                <a href="#" data-name="KFC Chicken with Blone" data-price="280.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;"onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
-                onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">Add to Cart</a>
+        <div class="col-md-4 product">
+            <div class="card">
+                <div class="image-container">
+                    <img src="/assets/images/strips.jpg" class="card-img-top" alt="KFC Chicken with Blone">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title product-name">KFC Chicken with Blone</h5>
+                    <!-- <p class="card-text">Price: $<span class="product-price">5.00</span></p> -->
+                    <select class="form-select size-select" aria-label="Select size" data-base-price="5.00">
+                        <option value="130.00">8pcs - ₹ 280.00</option>
+                        <option value="230.00">16pcs - ₹ 560.00</option>
+                    </select>
+                    <a href="#" data-name="KFC Chicken with Blone " data-price="5.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;" onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
+                        onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">Add to Cart</a>
+                </div>
             </div>
         </div>
-     </div>
-     <div class="col-md-4 product">
-        <div class="card">
-            <div class="image-container">
-                <img src="https://via.placeholder.com/200" class="card-img-top" alt="KFC chicken with Blone">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title product-name">KFC Chicken with Blone</h5>
-                <p class="card-text">Price: ₹ 560/16pcs</p>
-                <a href="#" data-name="KFC Chicken with Blone" data-price="560.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;"onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
-                onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">Add to Cart</a>
-            </div>
-        </div>
-     </div>
-
     </div>
 
 
@@ -332,7 +237,7 @@
                         <tbody></tbody>
                     </table>
                     <div class="text-end">
-                        <strong>Total Price: $<span class="total-cart">0.00</span></strong>
+                        <strong>Total Price: ₹<span class="total-cart">0.00</span></strong>
                     </div>
                 </div>
                 <div class="modal-footer">
