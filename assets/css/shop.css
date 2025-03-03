@@ -52,7 +52,7 @@
 	  }
 
 	  .menu a {
-		text-decoration: none;
+		text-decoration: none !important;
 		color: white;
 		font-size: 20px;
 		transition: color 0.3s;
@@ -126,8 +126,8 @@
 
   .navmenu li a {
 	color: rgb(0, 0, 0);
-	/* text-decoration: none; */
-	font-size: 1.3rem;
+	text-decoration: none;
+	font-size: 1.2rem;
 	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 
@@ -160,6 +160,43 @@
 	}
 
   }
+	@media (max-width: 400px){
+	.cart-icon {
+		position: absolute;
+		top: -8px;
+		right: 40px;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		z-index: 10;
+	}
+
+	.cart-icon svg {
+		width: 3rem;
+		height: 2.5rem;
+		fill: white;
+		cursor: pointer;
+		transition: transform 0.3s ease, fill 0.3s ease;
+		padding: 4px;
+	}
+
+	.cart-icon svg:hover {
+		fill: #ff9800;
+		transform: scale(1.15);
+	}
+
+	#cartCount {
+		font-size: 0.8rem;
+		position: absolute;
+		top: -5px;
+		right: -10px;
+		background: transparent;
+		color: white;
+		padding: 3px 7px;
+		font-weight: bold;
+	}
+	}
+
   /* navbar */
   .filter-btn {
 	color: #d35f20 !important;
