@@ -313,7 +313,7 @@ html {
         gap: 1rem;
       }
       .splide__pagination {
-        bottom: 0em !important;
+        bottom: -2.5em !important;
         left: 0;
         padding: 0 1em;
         position: absolute;
