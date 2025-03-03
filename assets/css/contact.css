@@ -8,157 +8,151 @@
         }
 
 
-        .show-cart tbody tr td {
-          vertical-align: middle;
+    /* Navbar Styles */
+    nav {
+        position: sticky;
+        top: 0;
+        background-color: #d35f20;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        height: 50px;
+        z-index: 10;
+        opacity: 1;
+        transition: opacity 0.5s ease;
       }
-          /* Navbar Styles */
-          nav {
-          position: sticky;
-          top: 0;
-          background-color: #d35f20;
-          color: white;
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-          padding: 0rem 1rem;
-          height: 70px;
-          z-index: 10;
-          opacity: 1;
-          transition: opacity 0.5s ease;
-          }
 
-          .logo {
-          font-size: 2rem;
-          font-weight: bold;
-          font-family: 'Lucida Handwriting', cursive;
-          }
+      .logo {
+        font-size: 2rem;
+        font-weight: bold;
+        font-family: 'Lucida Handwriting', cursive;
+      }
 
-          .menu {
-          list-style: none;
-          display: flex;
-          gap: 6rem;
-          margin: 0;
-          padding: 0;
-          }
-
-          .menu li {
-          display: inline;
-          }
-          .menu li a#viewCart {
-            display: flex;
-            align-items: center; /* Align content vertically */
-            /* gap: 5px; Add spacing between icon and text */
-          }
-          .menu a {
-          text-decoration: none;
-          color: white;
-          font-size: 20px;
-          transition: color 0.3s;
-          }
-
-          .menu a:hover {
-          color: #f0a500;
-          }
-
-        /* Hamburger Menu */
-        #menuToggle {
-        position: absolute;
-        top: 25px;
-        right: 15px;
-        z-index: 15;
-        }
-
-        #menuToggle label {
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-        gap: 5px;
-        }
-        #menuToggle input {
-        display: none;
-        }
-        #menuToggle .bar {
-        width: 25px;
-        height: 3px;
-        background-color: white;
-        transition: transform 0.3s, opacity 0.3s;
-        }
-
-        #menuToggle input:checked + label .bar:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-        }
-
-        #menuToggle input:checked + label .bar:nth-child(2) {
-        opacity: 0;
-        }
-
-        #menuToggle input:checked + label .bar:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -7px);
-        }
-
-        #menuToggle .navmenu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 40px;
-        right: 5px;
-        background: #fffdfd;
-        width: 215px;
-        padding: 2rem 0rem;
-        box-shadow: 0px 4px 12px rgba(239, 109, 35, 0.3);
-        }
-
-        .navmenu{
+      .menu {
         list-style: none;
-        margin:0;
-        padding: 0;
-        }
-        #menuToggle input:checked ~ .navmenu {
         display: flex;
-        }
+        gap: 6rem;
+        margin: 0;
+        padding: 0;
+      }
 
-        .navmenu li {
-        text-align: center;
-        margin: 0.5rem 0;
-        }
+      .menu li {
+        display: inline;
+      }
 
-        .navmenu li a {
-        color: rgb(0, 0, 0);
-        /* text-decoration: none; */
+      .menu a {
+        text-decoration: none;
+        color: white;
         font-size: 1.3rem;
+        transition: color 0.3s;
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
+      }
 
-        /*hamburger menu only on mobile view */
-        #menuToggle {
-        display: none;
-        }
-        .menu {
-        display: none;
-        }
-        @media (max-width: 768px) {
-        #menuToggle {
-          display: block;
-        }
-        .logo {
-          position: absolute;
-          top: 10px;
-          left: 25px;
-          margin: 0;
-        }
-        }
+      .menu a:hover {
+        color: #f0a500;
+      }
 
-        @media (min-width: 769px) {
-        .menu {
-          display: flex;
-        }
+  /* Hamburger Menu */
+  #menuToggle {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    z-index: 15;
+  }
 
-        #menuToggle {
-          display: none;
-        }
+  #menuToggle label {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+  #menuToggle input {
+    display: none;
+  }
+  #menuToggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: transform 0.3s, opacity 0.3s;
+  }
 
-        }
-        /* navbar */
+  #menuToggle input:checked + label .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  #menuToggle input:checked + label .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menuToggle input:checked + label .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -7px);
+  }
+
+  #menuToggle .navmenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    right: 5px;
+    background: #fffdfd;
+    width: 150px;
+    padding: 2rem;
+    box-shadow: 0px 4px 12px rgba(239, 109, 35, 0.3);
+  }
+
+  .navmenu{
+    list-style: none;
+    margin:0;
+    padding: 0;
+  }
+  #menuToggle input:checked ~ .navmenu {
+    display: flex;
+  }
+
+  .navmenu li {
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+
+  .navmenu li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  /*hamburger menu only on mobile view */
+  #menuToggle {
+    display: none;
+  }
+  .menu {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    #menuToggle {
+      display: block;
+    }
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 25px;
+      margin: 0;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .menu {
+      display: flex;
+    }
+
+    #menuToggle {
+      display: none;
+    }
+
+  }
+  /* navbar */
 
         .container {
             width: 90%;
