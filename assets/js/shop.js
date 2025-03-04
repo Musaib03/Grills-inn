@@ -80,7 +80,7 @@ function displayCart() {
                 (item) => `
         <tr>
             <td>${item.name} (${item.size})</td>
-            <td>$${item.price}</td>
+            <td>₹${item.price}</td>
             <td>
                 <button class="btn btn-sm btn-primary minus-item" data-name="${item.name}" data-size="${item.size}">-</button>
                 ${item.count}
