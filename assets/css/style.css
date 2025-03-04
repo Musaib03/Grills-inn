@@ -5,9 +5,9 @@ html {
 }
     /* Navbar Styles */
     nav {
-      position: sticky;
+      position: fixed;
       top: 0;
-      background-color: #d35f20;
+      background-color: transparent;
       color: white;
       display: flex;
       justify-content: space-around;
@@ -17,6 +17,7 @@ html {
       z-index: 10;
       opacity: 1;
       transition: opacity 0.5s ease;
+      width:90%;
     }
 
     .logo {
@@ -179,7 +180,7 @@ html {
   max-width: 600px;
   position: relative;
   z-index: 2;
-  margin-top:-150px;
+  margin-top:-30px;
 }
 
 .hero-subtitle {
@@ -213,7 +214,8 @@ html {
   text-align: center;
   position: relative;
   z-index: 2;
-  /* margin-top:2.5rem; */
+
+  /* margin-top:-5.5rem;x */
 }
 @media (max-width: 400px){
   .btn{
