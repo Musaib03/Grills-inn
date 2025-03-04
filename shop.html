@@ -71,7 +71,8 @@
       <div class="col-md-12 d-flex flex-wrap gap-2">
           <button class="btn btn-outline-primary filter-btn" data-category="all">All</button>
           <button class="btn btn-outline-primary filter-btn" data-category="burgers">Burgers</button>
-          <button class="btn btn-outline-primary filter-btn" data-category="pizza">Pizza</button>
+          <button class="btn btn-outline-primary filter-btn" data-category="nonvegpizza">Non-Veg Pizza</button>
+          <button class="btn btn-outline-primary filter-btn" data-category="vegpizza">Veg Pizza</button>
           <button class="btn btn-outline-primary filter-btn" data-category="pasta">Pasta</button>
           <button class="btn btn-outline-primary filter-btn" data-category="tandoori">Tandoori</button>
           <button class="btn btn-outline-primary filter-btn" data-category="frenchfries">French Fries</button>
@@ -98,9 +99,9 @@
                   <h5 class="card-title product-name">Cheese Burger</h5>
                   <!-- <p class="card-text">Price: $<span class="product-price">5.00</span></p> -->
                   <select class="form-select size-select" aria-label="Select size" data-base-price="5.00">
-                      <option value="5.00">Regular - ₹ 5.00</option>
-                      <option value="6.50">Medium - ₹ 6.50</option>
-                      <option value="8.00">Large - ₹ 8.00</option>
+                      <option value="5.00">Regular - ₹ 30</option>
+                      <option value="6.50">Medium - ₹ 50</option>
+                      <option value="8.00">Large - ₹ 60</option>
                   </select>
                   <a href="#" data-name="Cheese Burger" data-price="5.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;" onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
                       onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">Add to Cart</a>
@@ -108,29 +109,395 @@
           </div>
       </div>
   </div>
+  <!-- Category: Non-Veg Pizza -->
+<h2 class="mt-4">Non-Veg Pizza</h2>
+<div class="row product-group" data-category="nonvegpizza">
+    <div class="col-md-4 product">
+        <div class="card">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/200" class="card-img-top" alt="Chicken Blast Pizza">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title product-name">Chicken Blast Pizza</h5>
+                <select class="form-select size-select" aria-label="Select size" data-base-price="8.00">
+                    <option value="199">Regular - ₹ 199</option>
+                    <option value="399">Medium - ₹ 399</option>
+                    <option value="579">Large - ₹ 579</option>
+                </select> 
+                <a href="#" data-name="Chicken Blast Pizza" data-price="8.00" class="add-to-cart btn btn-primary" 
+                   style="background-color: #d35f20; border-color: #d35f20;" 
+                   onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='white';"
+                   onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">
+                   Add to Cart
+                </a>
+            </div>
+        </div>
+    </div>
 
-  <h2 class="mt-4">Pizza</h2>
-  <div class="row product-group" data-category="pizza">
-      <div class="col-md-4 product">
-          <div class="card">
-              <div class="image-container">
-                  <img src="https://via.placeholder.com/200" class="card-img-top" alt="Margherita Pizza">
-              </div>
-              <div class="card-body">
-                  <h5 class="card-title product-name">Margherita Pizza</h5>
-                  <!-- <p class="card-text">Price: $<span class="product-price">8.00</span></p> -->
-                  <select class="form-select size-select" aria-label="Select size" data-base-price="8.00">
-                      <option value="8.00">Regular - ₹ 8.00</option>
-                      <option value="10.00">Medium - ₹ 10.00</option>
-                      <option value="12.00">Large - ₹ 12.00</option>
-                  </select>
-                  <a href="#" data-name="Margherita Pizza" data-price="8.00" class="add-to-cart btn btn-primary" style="background-color: #d35f20; border-color: #d35f20;" onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='#white';"
-                      onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">Add to Cart</a>
+    <div class="col-md-4 product">
+        <div class="card">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/200" class="card-img-top" alt="Chilly Chicken Pizza">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title product-name">Chilly Chicken Pizza</h5>
+                <select class="form-select size-select" aria-label="Select size" data-base-price="8.00">
+                    <option value="250">Regular - ₹ 250</option>
+                    <option value="420">Medium - ₹ 420</option>
+                    <option value="600">Large - ₹ 600</option>
+                </select>
+                <a href="#" data-name="Chilly Chicken Pizza" data-price="8.00" class="add-to-cart btn btn-primary" 
+                style="background-color: #d35f20; border-color: #d35f20;" 
+                   onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='white';"
+                   onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">
+                   Add to Cart
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product">
+        <div class="card">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/200" class="card-img-top" alt="Roasted Chicken Pizza">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title product-name">Roasted Chicken Pizza</h5>
+                <select class="form-select size-select" aria-label="Select size" data-base-price="8.00">
+                    <option value="200">Regular - ₹ 200</option>
+                    <option value="400">Medium - ₹ 400</option>
+                    <option value="580">Large - ₹ 580</option>
+                </select>
+                <a href="#" data-name="Roasted Chicken Pizza" data-price="8.00" class="add-to-cart btn btn-primary" 
+                style="background-color: #d35f20; border-color: #d35f20;" 
+                   onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='white';"
+                   onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">
+                   Add to Cart
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product">
+        <div class="card">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/200" class="card-img-top" alt="Butter Chicken Pizza">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title product-name">Butter Chicken Pizza</h5>
+                <select class="form-select size-select" aria-label="Select size" data-base-price="8.00">
+                    <option value="260">Regular - ₹ 260</option>
+                    <option value="450">Medium - ₹ 450</option>
+                    <option value="620">Large - ₹ 620</option>
+                </select>
+                <a href="#" data-name="Butter Chicken Pizza" data-price="8.00" class="add-to-cart btn btn-primary" 
+                   style="background-color: #d35f20; border-color: #d35f20;" 
+                   onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='white';"
+                   onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">
+                   Add to Cart
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product">
+        <div class="card">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/200" class="card-img-top" alt="Chicken Tikka Pizza">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title product-name">Chicken Tikka Pizza</h5>
+                <select class="form-select size-select" aria-label="Select size" data-base-price="8.00">
+                    <option value="240">Regular - ₹ 240</option>
+                    <option value="420">Medium - ₹ 420</option>
+                    <option value="580">Large - ₹ 580</option>
+                </select>
+                <a href="#" data-name="Chicken Tikka Pizza" data-price="8.00" class="add-to-cart btn btn-primary" 
+                   style="background-color: #d35f20; border-color: #d35f20;" 
+                   onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='white';"
+                   onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">
+                   Add to Cart
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product">
+        <div class="card">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/200" class="card-img-top" alt="Mexican Bite Pizza">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title product-name">Mexican Bite Pizza</h5>
+                <select class="form-select size-select" aria-label="Select size" data-base-price="8.00">
+                    <option value="240">Regular - ₹ 240</option>
+                    <option value="420">Medium - ₹ 420</option>
+                    <option value="580">Large - ₹ 580</option>
+                </select>
+                <a href="#" data-name="Mexican Bite Pizza" data-price="8.00" class="add-to-cart btn btn-primary" 
+                   style="background-color: #d35f20; border-color: #d35f20;" 
+                   onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='white';"
+                   onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">
+                   Add to Cart
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product">
+        <div class="card">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/200" class="card-img-top" alt="Peri Peri Chicken Pizza">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title product-name">Peri Peri Chicken Pizza</h5>
+                <select class="form-select size-select" aria-label="Select size" data-base-price="8.00">
+                    <option value="260">Regular - ₹ 260</option>
+                    <option value="450">Medium - ₹ 450</option>
+                    <option value="620">Large - ₹ 620</option>
+                </select>
+                <a href="#" data-name="Peri Peri Chicken Pizza" data-price="8.00" class="add-to-cart btn btn-primary" 
+                   style="background-color: #d35f20; border-color: #d35f20;" 
+                   onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='white';"
+                   onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">
+                   Add to Cart
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product">
+        <div class="card">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/200" class="card-img-top" alt="Shezwan Chicken Pizza">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title product-name">Shezwan Chicken Pizza</h5>
+                <select class="form-select size-select" aria-label="Select size" data-base-price="8.00">
+                    <option value="260">Regular - ₹ 260</option>
+                    <option value="430">Medium - ₹ 430</option>
+                    <option value="600">Large - ₹ 600</option>
+                </select>
+                <a href="#" data-name="Shezwan Chicken Pizza" data-price="8.00" class="add-to-cart btn btn-primary" 
+                   style="background-color: #d35f20; border-color: #d35f20;" 
+                   onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='white';"
+                   onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">
+                   Add to Cart
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product">
+        <div class="card">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/200" class="card-img-top" alt="Grills Special Pizza">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title product-name">Grills Special Pizza</h5>
+                <select class="form-select size-select" aria-label="Select size" data-base-price="8.00">
+                    <option value="250">Regular - ₹ 250</option>
+                    <option value="499">Medium - ₹ 499</option>
+                    <option value="629">Large - ₹ 629</option>
+                </select>
+                <a href="#" data-name="Grills Special Pizza" data-price="8.00" class="add-to-cart btn btn-primary" 
+                   style="background-color: #d35f20; border-color: #d35f20;" 
+                   onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='white';"
+                   onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">
+                   Add to Cart
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Category: Veg Pizza -->    
+<h2 class="mt-4">Veg Pizza</h2>
+<div class="row product-group" data-category="vegpizza">
+    <div class="col-md-4 product">
+        <div class="card">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/200" class="card-img-top" alt="Margherita Pizza">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title product-name">Margherita Pizza</h5>
+                <select class="form-select size-select" aria-label="Select size" data-base-price="8.00">
+                    <option value="180">Regular - ₹ 180</option>
+                    <option value="350">Medium - ₹ 350</option>
+                    <option value="500">Large - ₹ 500</option>
+                </select> 
+                <a href="#" data-name="Margherita Pizza" data-price="8.00" class="add-to-cart btn btn-primary" 
+                   style="background-color: #d35f20; border-color: #d35f20;" 
+                   onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='white';"
+                   onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">
+                   Add to Cart
+                </a>
+            </div>
+        </div>
+    </div>
 
-              </div>
-          </div>
-      </div>
-  </div>
+    <div class="col-md-4 product">
+        <div class="card">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/200" class="card-img-top" alt="Cheese Burst Pizza">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title product-name">Cheese Burst Pizza</h5>
+                <select class="form-select size-select" aria-label="Select size" data-base-price="8.00">
+                    <option value="250">Regular - ₹ 250</option>
+                    <option value="450">Medium - ₹ 450</option>
+                    <option value="630">Large - ₹ 630</option>
+                </select>
+                <a href="#" data-name="Cheese Burst Pizza" data-price="8.00" class="add-to-cart btn btn-primary" 
+                   style="background-color: #d35f20; border-color: #d35f20;" 
+                   onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='white';"
+                   onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">
+                   Add to Cart
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product">
+        <div class="card">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/200" class="card-img-top" alt="Tandoori Paneer Pizza">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title product-name">Tandori Panner Pizza</h5>
+                <select class="form-select size-select" aria-label="Select size" data-base-price="8.00">
+                    <option value="200">Regular - ₹ 200</option>
+                    <option value="400">Medium - ₹ 400</option>
+                    <option value="580">Large - ₹ 580</option>
+                </select>
+                <a href="#" data-name="Tandoori Paneer Pizza" data-price="8.00" class="add-to-cart btn btn-primary" 
+                   style="background-color: #d35f20; border-color: #d35f20;" 
+                   onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='white';"
+                   onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">
+                   Add to Cart
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product">
+        <div class="card">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/200" class="card-img-top" alt="Shezwan Veg Pizza">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title product-name">Shezwan Veg Pizza</h5>
+                <select class="form-select size-select" aria-label="Select size" data-base-price="8.00">
+                    <option value="190">Regular - ₹ 190</option>
+                    <option value="350">Medium - ₹ 350</option>
+                    <option value="500">Large - ₹ 500</option>
+                </select>
+                <a href="#" data-name="Shezwan Veg Pizza" data-price="8.00" class="add-to-cart btn btn-primary" 
+                   style="background-color: #d35f20; border-color: #d35f20;" 
+                   onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='white';"
+                   onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">
+                   Add to Cart
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product">
+        <div class="card">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/200" class="card-img-top" alt="Cheese & Tomato Pizza">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title product-name">Cheese & Tomato Pizza</h5>
+                <select class="form-select size-select" aria-label="Select size" data-base-price="8.00">
+                    <option value="200">Regular - ₹ 200</option>
+                    <option value="350">Medium - ₹ 350</option>
+                    <option value="500">Large - ₹ 500</option>
+                </select>
+                <a href="#" data-name="Cheese & Tomato Pizza" data-price="8.00" class="add-to-cart btn btn-primary" 
+                   style="background-color: #d35f20; border-color: #d35f20;" 
+                   onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='white';"
+                   onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">
+                   Add to Cart
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product">
+        <div class="card">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/200" class="card-img-top" alt="Farm House Pizza">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title product-name">Farm House Pizza</h5>
+                <select class="form-select size-select" aria-label="Select size" data-base-price="8.00">
+                    <option value="200">Regular - ₹ 200</option>
+                    <option value="350">Medium - ₹ 350</option>
+                    <option value="530">Large - ₹ 530</option>
+                </select>
+                <a href="#" data-name="Farm House Pizza" data-price="8.00" class="add-to-cart btn btn-primary" 
+                   style="background-color: #d35f20; border-color: #d35f20;" 
+                   onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='white';"
+                   onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">
+                   Add to Cart
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product">
+        <div class="card">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/200" class="card-img-top" alt="Corn Pizza">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title product-name">Corn Pizza</h5>
+                <select class="form-select size-select" aria-label="Select size" data-base-price="8.00">
+                    <option value="200">Regular - ₹ 200</option>
+                    <option value="360">Medium - ₹ 360</option>
+                    <option value="520">Large - ₹ 520</option>
+                </select>
+                <a href="#" data-name="Corn Pizza" data-price="8.00" class="add-to-cart btn btn-primary" 
+                   style="background-color: #d35f20; border-color: #d35f20;" 
+                   onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='white';"
+                   onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">
+                   Add to Cart
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product">
+        <div class="card">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/200" class="card-img-top" alt="Mix Veg Pizza">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title product-name">Mix Veg Pizza</h5>
+                <select class="form-select size-select" aria-label="Select size" data-base-price="8.00">
+                    <option value="190">Regular - ₹ 190</option>
+                    <option value="350">Medium - ₹ 350</option>
+                    <option value="500">Large - ₹ 500</option>
+                </select>
+                <a href="#" data-name="Mix Veg Pizza" data-price="8.00" class="add-to-cart btn btn-primary" 
+                   style="background-color: #d35f20; border-color: #d35f20;" 
+                   onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='white';"
+                   onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">
+                   Add to Cart
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 product">
+        <div class="card">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/200" class="card-img-top" alt="Veg Pizza">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title product-name">Veg Pizza</h5>
+                <select class="form-select size-select" aria-label="Select size" data-base-price="8.00">
+                    <option value="170">Regular - ₹ 170</option>
+                    <option value="300">Medium - ₹ 300</option>
+                    <option value="450">Large - ₹ 450</option>
+                </select>
+                <a href="#" data-name="Veg Pizza" data-price="8.00" class="add-to-cart btn btn-primary" 
+                   style="background-color: #d35f20; border-color: #d35f20;" 
+                   onmouseover="this.style.backgroundColor='#81360e'; this.style.borderColor='#b94e1a'; this.style.color='white';"
+                   onmouseout="this.style.backgroundColor='#d35f20'; this.style.borderColor='#d35f20'; this.style.color='#fff';">
+                   Add to Cart
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
     <!-- Category: KFC -->
     <h2 class="mt-4">KFC Items</h2>
     <div class="row product-group" data-category="kfc">
