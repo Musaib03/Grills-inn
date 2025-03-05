@@ -328,6 +328,11 @@ html {
         bottom: -0.5em !important;
       }
     }
+    @media (min-width: 310px) {
+      .splide__pagination {
+        bottom: -0.3rem !important;
+      }
+    }
     @media screen and (max-width: 768px) {
       .about-content {
         margin-top: -40px !important;
