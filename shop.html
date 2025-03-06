@@ -591,7 +591,7 @@
 </div>
 
 
-    <!-- Modal -->
+    <!-- Cart Modal -->
     <div class="modal fade" id="cart" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -610,7 +610,9 @@
                                 <th>Actions</th>
                             </tr>
                         </thead>
-                        <tbody></tbody>
+                        <tbody>
+                            <!-- Cart items will be dynamically inserted here -->
+                        </tbody>
                     </table>
                     <div class="text-end">
                         <strong>Total Price: ₹<span class="total-cart">0.00</span></strong>
@@ -618,7 +620,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Checkout</button>
+                    <button type="button" id="placeOrderBtn" class="btn btn-primary">Place Order</button>
                 </div>
             </div>
         </div>

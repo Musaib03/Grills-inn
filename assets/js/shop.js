@@ -162,3 +162,30 @@ document.querySelectorAll(".size-select").forEach(select => {
         console.log(`Selected size price is now $${selectedPrice.toFixed(2)} (Base: $${basePrice.toFixed(2)})`);
     });
 });
+
+document.getElementById("placeOrderBtn").addEventListener("click", function () {
+    // Define recipient WhatsApp number
+    const phoneNumber = "919797632997";
+
+    // Collect cart details
+    const cartItems = document.querySelectorAll(".show-cart tbody tr");
+    let message = "Hello!%0A%0AI would like to place an order. Here are the details:%0A%0A";
+    cartItems.forEach((item) => {
+        const name = item.querySelector("td:nth-child(1)").textContent.trim();
+        const price = item.querySelector("td:nth-child(2)").textContent.trim();
+        const quantity = item.querySelector("td:nth-child(3)").textContent.trim();
+        const total = item.querySelector("td:nth-child(4)").textContent.trim();
+
+        message += `🛒 Product: ${name}%0A💰 Price: ${price}%0A🔢 Quantity:${quantity}%0A📦 Total: ${total}%0A%0A`;
+    });
+
+    // Add total price
+    const totalPrice = document.querySelector(".total-cart").textContent.trim();
+    message += `📊 Grand Total: ₹${totalPrice}%0A%0AThank you!`;
+
+    // WhatsApp URL with the recipient number
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+
+    // Redirect to WhatsApp
+    window.open(whatsappUrl, "_blank");
+});
